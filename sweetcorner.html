@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Dreamer Photography</title>
+    <link rel="icon"
+        href="/Bootstrap/img/kisspng-computer-icons-camera-photography-clip-art-5b20c89247ee67.5952202915288751542946.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mooli&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .content-item {
+        padding: 30px 0;
+        background-color: #FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color: #F0F0F0;
+        padding: 50px 0;
+        height: 100%;
+    }
+
+    .content-item h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .content-item h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin: 10px 0 15px;
+        padding: 0;
+    }
+
+    .content-headline {
+        height: 1px;
+        text-align: center;
+        margin: 20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color: #FFFFFF;
+        display: inline-block;
+        margin: -20px auto 0;
+        padding: 0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color: #F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size: 14px;
+        color: #AAAAAA;
+        display: block;
+    }
+
+    /* BOXES */
+
+    .box {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        margin: 30px 0 5px;
+        font-weight: bold;
+    }
+
+    .box ul {
+        margin: 0;
+    }
+
+    .box ul li {
+        font-size: 13px;
+        border-bottom: 1px dashed #DDDDDD;
+        padding: 10px 0;
+        font-weight: 600;
+    }
+
+    .box ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .box ul li i {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .box.categories ul li i {
+        color: #BBBBBB;
+        position: relative;
+        top: 2px;
+        width: 20px;
+    }
+
+    .posts ul li a {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
+    .posts ul li a:hover {
+        color: #333333;
+    }
+
+    .posts ul li div {
+        font-size: 13px;
+        color: #999999;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .box.posts ul li i {
+        color: #333333;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .box.tags ul.blog-tags li {
+        border: 0;
+    }
+
+    ul.blog-tags li {
+        padding: 7px 0;
+    }
+
+    div ul.blog-tags li i,
+    div .box.tags ul li i {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+    }
+
+    .blog p img.pull-left {
+        margin-right: 15px;
+    }
+
+    .blog p img {
+        max-width: 300px;
+        border: 3px solid #BBBBBB;
+        padding: 5px;
+    }
+
+    .blockquote {
+        font-size: 20px;
+        font-style: italic;
+        color: #555;
+        border-left: .25rem solid #ccc;
+        padding-left: 1rem;
+        margin: 0 30px;
+        width: 80%;
+    }
+
+    .img-fluid {
+        border-radius: 0.25rem;
+    }
+
+    .mooli-regular {
+        font-family: "Mooli", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+        .mooli-regular {
+            font-size: 12px;
+        }
+
+        .content-item h2,
+        .content-item h3,
+        .box h3,
+        .blockquote {
+            font-size: 16px;
+        }
+
+        .box ul li,
+        .posts ul li a,
+        .posts ul li div {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!--NAV MENU-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://t4.ftcdn.net/jpg/04/96/47/13/360_F_496471319_DbtjoUvKqyy2e9OfgBnK5mm2AXhKpa9m.jpg"
+                    alt="Bootstrap" height="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="margin-right: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-right: 50px;">Porfilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV MENU-->
+
+
+    <section class="content-item grey" id="blog-item">
+        <div class="container" style="max-width: 1200px; background-color: white;">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-12 blog">
+                    <h2 style="margin-left: 30px;">The Sweet Corner - The sweet memory.</h2>
+                    <ul class="blog-detail list-unstyled list-inline" style="margin:0 30px;">
+                        <li><i class="fa fa-calendar"></i>Nov 14,2021</li>
+                        <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                    </ul>
+                    <blockquote class="blockquote mt-3">
+                        <p class="mb-0">"Có thể với nhiều người, TSC chỉ là nơi để kiếm tiền. Còn với mình, TSC là nơi
+                            lưu giữ rất nhiều kỉ niệm mà mình sẽ luôn biết ơn vì được là một phần của những kỉ niệm đó."
+                        </p>
+                    </blockquote>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="row mt-5" style="margin-left: 30px;">
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner1.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner2.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="row mt-3" style="margin-left: 30px;">
+                                <img src="img/blog/sweetcorner/sweetconnercover.png" style="width: 100%;">
+                            </div>
+                            <div class="row mt-3" style="margin-left: 30px;">
+                                <img src="img/blog/sweetcorner/sweetconner3.png" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                                <p class="mooli-regular mobile-text mt-5" style="margin: 30px;text-align: justify;">
+                                    11/04/2016 - 11/04/2021
+                                </p>
+                                <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                                    Chặng đường 5 năm bỗng qua nhanh như một cái chớp mắt. 5 năm trời với không biết bao
+                                    nhiêu kỉ niệm, thật sự không biết phải bắt đầu viết từ đâu.
+                                </p>
+                                <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                                    Mình nghĩ đối với du học sinh, việc đi làm thêm để có tiền trang trải cuộc sống nơi
+                                    đất khách là không hề lạ, và gần như là bắt buộc nếu gia đình không đủ điều kiện để
+                                    chu cấp cho tất cả các chi tiêu cần thiết. Là một du học sinh mới qua tuổi 19, mình
+                                    chưa hình dung được cuộc sống ngoài kia nó sẽ khắc nghiệt như thế nào cho tới khi tự
+                                    thân mình đi xin việc làm thêm, mùa thu của 5 năm trước. Ở San Jose có một cái quy
+                                    luật ngầm, lạ lắm, là du học sinh nào qua đây hình như đều đi xin việc ở Lee
+                                    Sandwich. Vì không có giấy tờ và du học sinh không được phép đi làm thêm, mình đúng
+                                    kiểu khao khát có một công việc dù là trả minimum wage thôi miễn là có tiền để trang
+                                    trải. Mình xin vào làm LS, ngay ngày đầu tiên đã bị cô quản lí gặp riêng nói chuyện.
+                                    Mình vẫn nhớ như in từng lời cô đó nói, “Cô tưởng con qua đây đi du học thì tiếng
+                                    Anh phải đẳng cấp phải như thế nào đó chứ bây giờ lấy order không được thì làm sao
+                                    mà cô mướn con được?” Và hôm đó mình bị cho ra chuồng gà luôn chỉ sau 4 tiếng thử
+                                    việc, lí do: ngu tiếng anh, không nghe không lấy được order. Mình chỉ mới ở Mỹ được
+                                    4 tháng, có nhiều món ăn tiếng anh nói như nào mình còn không biết thì nghe và lấy
+                                    được order quả thật là một thử thách. Và okay lí do đó mình chấp nhận được, dù hơi
+                                    đắng nghét cái cuống họng, khóc không biết bao lần trên xe bus mỗi khi nhớ về những
+                                    câu từ của cô đó.
+                                </p>
+                                <p class="mooli-regular mobile-text" style="margin: 10px 30px; text-align: justify;">
+                                    Nhưng mà vì áp lực phải kiếm ra tiền để trả học phí mùa sau, mình nhất định phải tìm
+                                    được việc. Mình tiếp tục tìm kiếm việc trên Báo Thằng Mõ, đập vào mắt mình là một
+                                    công việc kiểu "việc nhẹ lương cao" ở một nhà hàng. Thời điểm đó được trả gần $18/h
+                                    là một mức lương nhiều người mơ ước, chưa kể còn có thêm tip. Vậy là một đứa nai tơ
+                                    như mình gọi ngay số điện thoại trên tờ báo để xin việc, ngạc nhiên thay cô đó kêu
+                                    mình đi làm ngay trong chiều tối đó. Mình không có ý kì thị hay chê bai gì công việc
+                                    của những cô gái chân dài xinh đẹp làm trong những quán nhậu bên này, nghề nào cũng
+                                    được miễn là kiếm tiền chân chính. Nhưng mà cái khoảnh khắc cô chủ quán nhậu đó đề
+                                    nghị mình tới ngồi bên cạnh những ông-chú-anh đang ngồi nhậu để "nói chuyện cho
+                                    vui", thì mình mới ngớ người ra, cuối cùng cũng nhận thức được tại sao người ta lại
+                                    chấp nhận trả lương cao như vậy, và hơn nữa còn chấp nhận du học sinh, không đòi hỏi
+                                    gì, chỉ cần là con gái! À chưa kể còn kêu mình lần sau đi làm nên bận váy ngắn, đừng
+                                    mặc quần dài!! Đỉnh điểm nhất là khi mấy ông-chú-anh đó nhìn thấy mình "quá con nít"
+                                    (hên ghê), mới tốt bụng nói mình đừng nên vào đây làm việc, nó không phù hợp với
+                                    những đứa như mình. Hồi đó đi đâu cũng còn đi bus, vậy là có một chú móc ví ra lấy 2
+                                    tờ $20 đưa cho mình bảo mình lấy tiền này bắt xe đi về nhà đi, lần sau xin việc thì
+                                    cẩn thận một chút. Vậy là được một phen hú hồn, chỉ vì ham tiền ham việc mà có được
+                                    một bài học...điếng người :)) Thỉnh thoảng nhớ lại, nếu như hôm đó không phải là chú
+                                    cho mình tiền đi về mà là một người khác, thì có thể cái note này, ngày hôm nay,
+                                    chắc không được viết ra những dòng như thế này. Quả là cuộc đời, à không, cuộc nhậu
+                                    nào cũng còn có (ít nhất) một người tốt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="mooli-regular mobile-text" style="margin: 10px 30px; text-align: justify;">
+                                Sau lần đó thì mình kiểu cũng hơi shock nên không còn hấp tấp tìm việc nữa mà lo tập
+                                trung học. Vậy mà cơ hội lại tới. Bà chị cousin của mình có quen biết một chị đang
+                                làm ở tiệm trà sữa nên nhờ chị đó xin việc cho mình. Lúc đầu mình cũng kiểu lo lắng
+                                nghĩ chắc gì người ta đã nhận du học sinh nhưng cũng không từ bỏ hi vọng. Cuối cùng
+                                thì may mắn cũng mỉm cười! Tất cả những câu chuyện được lưu lại ở TSC sẽ không tồn
+                                tại nếu như không có chị Thy, vậy nên sẽ rất khó để quên bà chị cá tính này mãi về
+                                sau :D Và đó chính là sự mở đầu của những ngày làm việc ở The Sweet Corner- nơi mà
+                                mình đã chưa từng nghĩ sẽ gắn bó cả 5 năm thanh xuân.
+                            </p>
+                            <div class="row" style="margin-left: 30px;">
+                                <div class="col-sm-6 col-7">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-12">
+                                            <img src="img/blog/sweetcorner/sweetconner4.png" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1">
+                                        <div class="col-sm-4 col-4">
+                                            <img src="img/blog/sweetcorner/sweetconner7.png" style="width: 100%;">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <img src="img/blog/sweetcorner/sweetconner6.png" style="width: 100%;">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <img src="img/blog/sweetcorner/sweetconner8.png" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-5">
+                                    <img src="img/blog/sweetcorner/sweetconner5.png"
+                                        style="width: 100%; max-height:480px ;">
+                                </div>
+                            </div>
+                            <blockquote class="blockquote mt-3">
+                                <p class="mb-0">Suy nghĩ đầu tiên khi vào làm việc ở TSC của mình là "wowwwwwwwwwwww.
+                                    cái tiệm gì mà nó nghệ dễ sợ. chắc ông trời thương mình nên cho mình rớt mấy cái job
+                                    kia, dành cho mình cái job này, quá phù hợp với một đứa yêu nghệ thuật và cái đẹp là
+                                    mình luôn!! Vô đây làm tha hồ deep :)) "
+                                </p>
+                            </blockquote>
+                            <p class="mooli-regular mobile-text"
+                                style="margin: 10px 30px; text-align: justify; font-weight: bold;">
+                                Có những chuyện xảy ra, có thể ở tại thời điểm mà nó xảy ra, mình không bao giờ nghĩ là
+                                chuyện đó sẽ đáng nhớ lắm, cho tới khi thời gian qua đi và nhiều chuyện nữa xảy ra, thì
+                                cái chuyện mà mình nghĩ sẽ không đáng nhớ ấy, bây giờ lại không thể nào quên được! Khó
+                                hiểu nhỉ cái bộ nhớ của con người :)
+                            </p>
+                            <p class="mooli-regular mobile-text" style="margin: 20px 30px; text-align: justify;">
+                                Nếu mà ngồi kể ra hết tất cả những kỉ niệm ở TSC chắc có lẽ mình có thể viết thành sách,
+                                mỗi năm là một tập sách riêng. Nhưng có lẽ không một ai chịu bỏ thời gian để đọc hết 5
+                                tập sách đó nên mình sẽ chỉ viết lại những gì mà mình sẽ không bao giờ quên được về TSC,
+                                để sau này khi mà đôi chân có lẽ sẽ chững chạc hơn một chút trên đường đời, mình ngồi
+                                lại và đọc những dòng này, mình biết ơn cái con Nhi 19 tuổi trẻ trâu ương bướng biết bao
+                                nhiêu vì đã không cố chấp mà bỏ cái tôi lên trên để bỏ việc sau những buổi "meeting" với
+                                manager hahaaaa
+                            </p>
+                            <p class="mooli-regular mobile-text" style="margin: 20px 30px; text-align: justify;">
+                                Mình sẽ không thể quên một con bé ngáo ngơ lúc mới vào làm việc. Quản lí của tiệm- dì
+                                Emily, và mấy chị (chị Yến, chị Hương, chị Vi, chị Thy, chị Nancy, chị Ngọc) chắc đã
+                                "cực khổ" chịu trận vì mình nhiều rồi :) Nếu không phải là nhờ mấy chị khuyên nhủ, giúp
+                                đỡ và giải ngố cho mình những lúc làm mọi người phiền lòng, chắc mình đã sớm bị cho ra
+                                chuồng gà. Cô gái năm 19 tuổi cái tôi cao như thế nào chắc mọi người cũng có thể đoán
+                                được? May mắn sao mà gặp được những người có thể chịu đựng sự bướng bỉnh "sửu nhi" của
+                                mình. Sẽ nhớ lắm những lúc làm dì Emily tức tới mức nói không được phải khóc bỏ về
+                                (hehee xin lỗi dì nhiều nhe), những lúc ra xe ngồi "nhậu" riêng cùng chị Yến để hỏi chị
+                                Yến bây giờ phải làm sao để không làm mọi người buồn nữa, những lúc cùng chị Hương lái
+                                xe lòng vòng San Jose để nghe những câu chuyện gia đình không đầu không đuôi rồi mắt hai
+                                người cùng ướt :)...Mà thật sự lúc đó, mình cực kì quan tâm tới cảm nhận của mọi người
+                                xung quanh về mình. Cảm giác như cố gắng hết sức để làm mọi người đều vui, nhưng tới khi
+                                làm ai đó buồn thì bản thân lại thấy vô cùng có lỗi. Nhưng có lẽ giai đoạn đấy cho mình
+                                nhiều bài học nhất để khôn lớn. Và mặc dù mấy chị và dì cứ suốt ngày bảo mình, "Nhi ơi
+                                mày phải lớn lên đi chứ cuộc đời này không có màu hồng như lúc còn ở với gia đình mày
+                                đâu Nhi!", nhưng mình biết mấy chị đã cố gắng để không tô lại cái cuộc sống màu hồng của
+                                mình. Có chăng là những ngày màu hồng được pha thêm một màu xám, thỉnh thoảng thôi à...
+                            </p>
+                            <div class="row mt-2" style="margin-left: 30px;">
+                                <div class="col-sm-5 col-5">
+                                    <img src="img/blog/sweetcorner/sweetconner9.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                                <div class="col-sm-7 col-7">
+                                    <img src="img/blog/sweetcorner/sweetconner10.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <blockquote class="blockquote mt-3">
+                                <p class="mb-0">Đây là đội hình những ngày đầu mình ở TSC :D
+                                </p>
+                            </blockquote>
+                            <p class="mooli-regular mobile-text" style="margin: 20px 30px; text-align: justify;">
+                                Mình sẽ không quên được những mối duyên mà nhờ TSC mới có thể gặp được. Mình biết ơn dì
+                                Emily đã luôn rất tâm lí khi làm việc cùng mình. Đôi khi mình nghĩ nếu như không là dì
+                                Emily mà là một người nào khác, có lẽ mình đã bị đuổi từ tuần đầu tiên làm việc :) Lạ
+                                lắm, dì Emily đặc biệt mang lại cho mọi người cảm giác của người mà mình có thể tin
+                                tưởng. Còn nhớ ngày mình chở Mèo về nhà ở Fremont thì gặp tai nạn xe (chỉ sau 5 ngày
+                                mình lái xe), người đầu tiên mình gọi là dì Emily. Có lẽ là do sợ dì mình la nên không
+                                dám gọi dì mình hahaa. Xong rồi khóc lóc sợ hãi đủ kiểu với dì Emily, cảm giác như đang
+                                cầu cứu người nhà :)) Đặc biệt hơn là, lúc đi ăn cùng mấy chị và dì, mình đùa nói là
+                                chắc học xong sẽ về Việt Nam thôi vì tương lai ở đây như thế nào không rõ, thì dì đã chủ
+                                động hỏi mình và muốn “đầu tư” cho mình đi học mà không có điều kiện gì hết. Có phải là
+                                mình đã rất may mắn rồi không? T.T
+                            </p>
+
+                            <p class="mooli-regular mobile-text" style="margin: 20px 30px; text-align: justify;">
+                                Mình sẽ không quên cảm giác cầm phong bì tiền lương của chị Vi hay chị Trang, chạy vào
+                                nhà vệ sinh đếm coi có đủ $5000 tiền học chưa để mà hôm sau mang lên trường đóng học
+                                phí. Cái cảm giác đó khó tả cực kì! Mình đã từng đọc đâu đó người ta nói rằng, “Người
+                                cho mình mượn tiền không phải chỉ vì người ta có tiền mà cho mình mượn, mà là vì người
+                                ta thực sự tin tưởng ở mình”. Rồi chưa kể hai chị phải đợi mình mấy tháng sau mới trả đủ
+                                lại tiền mượn, tới nỗi phải gửi tiền cho má Hữu để má giữ dùm kẻo tiền nó có chân nó
+                                chạy mất :)) ôi nhắc tới má Hữu mà cứ thương má hoài những lúc nấu cho mình ăn mà nhớ cả
+                                mình không thích ăn gì, thích ăn gì để nấu cho đúng vị T,T Nhờ lòng tin từ mấy chị mà
+                                cũng lấy được cái bằng Communication. Quả thật không sai khi nói rằng TSC đã trả tiền
+                                học phí cho mình đi học suốt 5 năm trời. Và cũng không sai khi nói rằng, mấy chị đã tin
+                                tưởng ở mình nhiều như nào để cho mình mượn tiền nộp học mà không cần phải trả một lần
+                                hết số tiền đó, hay không có tiền lãi, hay không chờ đợi bất kì một sự trả ơn nào hết.
+                                Nhưng mà với mình, cái nợ tình nghĩa này nó còn nhiều hơn là số tiền nộp học. Nợ tiền
+                                mình không sợ, chỉ sợ nợ tình thôi à.
+                            </p>
+                            <div class="row" style="margin-left: 30px;">
+                                <div class="col-sm-6">
+                                    <img src="img/blog/sweetcorner/sweetconner11.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mooli-regular mobile-text"
+                                        style="margin: 20px 30px; text-align: justify;">
+                                        Mình sẽ không quên được giai đoạn bàn giao quán cho chủ mới. Mình là một trong
+                                        số những nhân viên tồn tại “song song hai đế chế” của TSC. Với mình, không bao
+                                        giờ có một sự so sánh nhất định nào giữa chủ cũ hay chủ mới. Làm việc cùng với
+                                        ai, mình đều cố gắng thể hiện bản thân tốt nhất và tận hưởng thời gian mình có ở
+                                        TSC. Nhưng lạ một điều là hai chủ của mình ai cũng đều thích nghệ thuật, có lẽ
+                                        vì vậy mà làm việc cùng họ, mình thấy (sợ, dĩ nhiên nhưng) dễ chịu vô cùng. Lời
+                                        cảm ơn cho cô Bick đã chấp nhận mình vào làm ngay từ những ngày đầu tiên. Và lời
+                                        cảm ơn cho cô Thuỷ đã tiếp tục tin tưởng mình lúc mới mua quán và ủng hộ mình
+                                        cho tới ngày mình nói lời tạm biệt TSC. Thật sự là mình tệ nhất khoản nói lời
+                                        tạm biệt luôn á…
+                                    </p>
+                                    <p class="mooli-regular mobile-text"
+                                        style="margin: 20px 30px; text-align: justify;">
+                                        À, vui nhất là mình sẽ không quên được những vị khách dễ thương nhất San Jose mà
+                                        mình được gặp khi làm ở TSC. Cô Thuỷ từng nói làm ở mấy tiệm này như đi làm dâu
+                                        trăm họ, phải gặp và đối phó với biết bao nhiêu loại người. Có những ngày vui
+                                        thì gặp toàn người dễ thương. Gặp anh chàng Mễ suốt ngày uống trà nóng không
+                                        thèm đậy nắp và rất tử tế chào mình trước khi đi Việt Nam công tác cả năm trời,
+                                        thời gian anh đó quay lại thì chắc không gặp lại mình nữa rồi. Gặp anh cảnh sát
+                                        Mỹ trắng suốt mấy năm trời chỉ uống iced white peach green tea không topping bất
+                                        kể trời lạnh hay nóng, gặp anh cảnh sát này những lần đầu còn phải chạy đi núp
+                                        và run muốn chết vì thân phận là du học sinh ai mà dám đứng hiên ngang làm, sau
+                                        này thì thấy là chào cứ như bạn thân :D Gặp chị bạn thích uống Honeydew Milk Tea
+                                        như mình, với lời hứa chừng nào có bằng sẽ nhuộm tóc cho mình nữa :)) Còn gặp cả
+                                        mấy cô châu Á mình, tết nhất là ghé lì xì cho mình thấy ấm lòng dễ sợ, có cô giờ
+                                        còn có cả số điện thoại mình để sau này con cô học ra làm nha sĩ thì sẽ mướn
+                                        mình về làm trợ lí :)) Nhiều ngày âm u đi làm mà gặp những khách hàng như vậy là
+                                        đúng kiểu made my day luôn…Chứ sợ nhất cái kiểu đi làm đã về trễ quá nửa đêm mà
+                                        còn gặp khách âm binh, hay mỗi lần đi đổ rác mỗi tối là cắm mặt cắm mũi chạy kẻo
+                                        sợ homeless tới đòi làm bạn...Những ngày như vậy đã qua rồi...
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-left: 30px;">
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner12.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner13.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-sm-7 col-7">
+                                    <img src="img/blog/sweetcorner/sweetconner14.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-5 col-5">
+                                    <img src="img/blog/sweetcorner/sweetconner15.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner16.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-3 col-3 mt-3">
+                                    <img src="img/blog/sweetcorner/sweetconner17.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                                <div class="col-sm-3 col-3 mt-3">
+                                    <img src="img/blog/sweetcorner/sweetconner18.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-sm-3 col-3 mt-3">
+                                    <img src="img/blog/sweetcorner/sweetconner17.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                                <div class="col-sm-3 col-3 mt-3">
+                                    <img src="img/blog/sweetcorner/sweetconner18.png"
+                                        style="width: 100%; max-height: 480px;">
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <img src="img/blog/sweetcorner/sweetconner16.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-sm-4 col-4">
+                                    <img src="img/blog/sweetcorner/sweetconner19.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-4 col-4">
+                                    <img src="img/blog/sweetcorner/sweetconner20.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-4 col-4">
+                                    <img src="img/blog/sweetcorner/sweetconner21.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-sm-8 col-8">
+                                    <img src="img/blog/sweetcorner/sweetconner22.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-4 col-4">
+                                    <img src="img/blog/sweetcorner/sweetconner23.png"
+                                        style="width: 100%; max-height: 500px;">
+                                </div>
+                            </div>
+
+                            <blockquote class="blockquote mt-3">
+                                <p class="mb-0">Đây là đội hình những ngày đầu mình ở TSC :D
+                                </p>
+                            </blockquote>
+
+                            <p class="mooli-regular mobile-text" style="margin: 20px 30px; text-align: justify;">
+                                Mình hi vọng là một hành trình nào đó kết thúc cũng là lúc một hành trình khác được mở
+                                ra. Và cuộc sống mà, nếu không phải là người thân trong gia đình, thì lời hứa cùng bên
+                                nhau mãi mãi chỉ là một lời gió thoảng thôi. Ai rồi thì cũng sẽ có những con đường riêng
+                                phải bước, chỉ mong là vì một lần đã từng bước ngang qua đời nhau, thì sẽ có cơ hội và
+                                lí do để có thể gặp lại một lần nữa, ở một thời điểm nào đó khác nữa. Và với mình, dõi
+                                theo và ủng hộ con đường mọi người đi sẽ luôn là điều mình luôn muốn làm :)
+                            </p>
+
+                            <div class="row" style="margin-left: 30px;">
+                                <div class="col-6 col-sm-6">
+                                    <img src="img/blog/sweetcorner/sweetconner24.png" style="width: 100%;">
+                                </div>
+                                <div class="col-6 col-sm-6">
+                                    <img src="img/blog/sweetcorner/sweetconner25.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="row mt-1" style="margin-left: 30px;">
+                                <div class="col-2 col-sm-2">
+                                    <img src="img/blog/sweetcorner/sweetconner26.png" style="width: 100%;">
+                                </div>
+                                <div class="col-5 col-sm-5">
+                                    <img src="img/blog/sweetcorner/sweetconner27.png" style="width: 100%;">
+                                </div>
+                                <div class="col-5 col-sm-5">
+                                    <img src="img/blog/sweetcorner/sweetconner28.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <blockquote class="blockquote mt-3">
+                                <p class="mb-0">Thỉnh thoảng gặp mặt nhậu nhẹt một chút, "hư thân" một chút cũng không
+                                    tệ, mọi người nhỉ? :)
+                                </p>
+                            </blockquote>
+
+                            <div class="row mt-5 mb-5" style="display: flex;align-items: center; margin-left: 30px;">
+                                <div class="col-sm-5 col-5">
+                                    <img src="img/blog/sweetcorner/sweetconner29.png" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-7 col-7">
+                                    <p class="mooli-regular mobile-text" style="margin: 20px 30px; display: flex;align-items: center; text-align: justify;">
+                                        Cảm ơn The Sweet Corner nhiều nhé, vì đã kiên nhẫn nhìn Nhi lớn lên!
+                                        <hr>
+                                        -Sửu Nhi- :)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <a class="btn btn-dark w-50 text-center"
+            style="display:flex; justify-content: center; margin: auto; margin-bottom: 20px; margin-top: 20px;"
+            href="index.html">Back to home page</a>
+    </section>
+
+
+    <!--Footer-->
+    <footer class="site-footer" style="width: 100%;">
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography"
+                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/"
+                                target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

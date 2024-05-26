@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Dreamer Photography</title>
+    <link rel="icon"
+        href="/Bootstrap/img/kisspng-computer-icons-camera-photography-clip-art-5b20c89247ee67.5952202915288751542946.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mooli&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .content-item {
+        padding: 30px 0;
+        background-color: #FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color: #F0F0F0;
+        padding: 50px 0;
+        height: 100%;
+    }
+
+    .content-item h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .content-item h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin: 10px 0 15px;
+        padding: 0;
+    }
+
+    .content-headline {
+        height: 1px;
+        text-align: center;
+        margin: 20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color: #FFFFFF;
+        display: inline-block;
+        margin: -20px auto 0;
+        padding: 0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color: #F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size: 14px;
+        color: #AAAAAA;
+        display: block;
+    }
+
+    /* BOXES */
+
+    .box {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        margin: 30px 0 5px;
+        font-weight: bold;
+    }
+
+    .box ul {
+        margin: 0;
+    }
+
+    .box ul li {
+        font-size: 13px;
+        border-bottom: 1px dashed #DDDDDD;
+        padding: 10px 0;
+        font-weight: 600;
+    }
+
+    .box ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .box ul li i {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .box.categories ul li i {
+        color: #BBBBBB;
+        position: relative;
+        top: 2px;
+        width: 20px;
+    }
+
+    .posts ul li a {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
+    .posts ul li a:hover {
+        color: #333333;
+    }
+
+    .posts ul li div {
+        font-size: 13px;
+        color: #999999;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .box.posts ul li i {
+        color: #333333;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .box.tags ul.blog-tags li {
+        border: 0;
+    }
+
+    ul.blog-tags li {
+        padding: 7px 0;
+    }
+
+    div ul.blog-tags li i,
+    div .box.tags ul li i {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+    }
+
+    .blog p img.pull-left {
+        margin-right: 15px;
+    }
+
+    .blog p img {
+        max-width: 300px;
+        border: 3px solid #BBBBBB;
+        padding: 5px;
+    }
+
+    .blockquote {
+        font-size: 24px;
+        font-style: italic;
+        color: #555;
+        border-left: .25rem solid #ccc;
+        padding-left: 1rem;
+        margin: 0 30px;
+        width: 70%;
+    }
+
+    .img-fluid {
+        border-radius: 0.25rem;
+    }
+
+    .mooli-regular {
+        font-family: "Mooli", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+        .mooli-regular {
+            font-size: 12px;
+        }
+
+        .content-item h2,
+        .content-item h3,
+        .box h3,
+        .blockquote {
+            font-size: 16px;
+        }
+
+        .box ul li,
+        .posts ul li a,
+        .posts ul li div {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!--NAV MENU-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://t4.ftcdn.net/jpg/04/96/47/13/360_F_496471319_DbtjoUvKqyy2e9OfgBnK5mm2AXhKpa9m.jpg"
+                    alt="Bootstrap" height="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="margin-right: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-right: 50px;">Porfilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV MENU-->
+
+
+    <section class="content-item grey" id="blog-item">
+        <div class="container" style="max-width: 1200px; background-color: white;">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-12 blog">
+                    <h2 style="margin-left: 30px;">Pacific Northwest Wanderlust</h2>
+                    <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
+                        <li><i class="fa fa-calendar"></i>Dec 23,2023</li>
+                        <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                    </ul>
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Life is not measured by the number of breaths we take but by the places and
+                            moments that take our breath away."</p>
+                    </blockquote>
+                    <img style="width: 80%;max-height:50% ; margin: auto; display: flex;"
+                        src="/img/blog/pacific/0ab772_9c128bb81d614c0fbe0dc34b471d32f8~mv2.png" alt="">
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        San Jose tối nay mưa rả rích (ô cái từ này lâu lắm rồi không viết!?). mưa nhìn cứ như Huế mình
+                        mỗi đông về. bật một chút nhạc Trịnh, và một ít rượu mơ, hôm nay lại là ngày đi làm cuối cùng
+                        của năm nữa, thật là lí tưởng để những ngón tay xinh xinh nì viết ra những con chữ không cần có
+                        đầu có đuôi, phơi ra những suy nghĩ mà rõ ràng là nó ở trọ trong đầu mình lâu đấy, chỉ là chẳng
+                        bao giờ (hay là cũng chẳng muốn) chia sẻ cùng quá nhiều người nữa. mà đúng ra là cũng chẳng
+                        nhiều người quan tâm á. ai cũng bận rộn với cuộc sống riêng mà.
+                    </p>
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Người ta thường bảo nhau rằng “cuộc đời là những chuyến đi”. nhưng không phải ai cũng được thực
+                        sự đi. hoặc mỗi người sẽ có một định nghĩa đi khác nhau. từ khi được ba mẹ mình chấp nhận thả
+                        cho đi xa, mỗi chuyến đi tới vùng đất mới mà mình chưa từng đặt chân tới- với mình đã là một
+                        chuyến đi.
+                    </p>
+
+                    <p class="mooli-regular" style="margin: 30px;text-align: justify;">
+                        Lần cuối mình thực hiện một chuyến đi là khi nào nhỉ? Solvang của tháng 5/2023? Pinnacle
+                        National Park của một ngày hè nóng tháng 7/2023? với một đứa đặc thù công việc là phải ở office
+                        8 tiếng mỗi ngày, những chuyến đi thưa thớt cho tới một khoảnh khắc nào đó cơ thể mình tự nhiên
+                        khựng lại vài giây và bảo “hmmm ê hình như mình cần một chuyến đi!”. và với mình, chuyến đi nào
+                        cũng góp phần healing my inner soul. thằng bạn mình mà nghe cái từ healing này chắc nó sẽ cười
+                        thẳng vào mặt mình bằng cái nụ cười không lẫn đi đâu được. nhục vậy chứ, lỡ để cho nó biết quá
+                        nhiều thứ về mình :))
+                    </p>
+
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Chuyến đi Oregon-Washington này là cái road trip thứ 2 sau chuyến road trip đầu tiên đi cùng nhà
+                        của Chi Mai can cook. đi với chị Chi thì ít dùng tới não hơn :)) quan trọng là chuyến đi này
+                        mang lại nhiều cơ hội để hiểu thêm về những người mà mình nghĩ là mình quen cũng lâu đó. rồi còn
+                        gặp được thêm nhiều người mới và được lắng nghe những câu chuyện của họ nữa.
+                    </p>
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Cũng giống như việc đọc sách. mình thích đọc và sống trong cái cuộc sống của nhân vật trong
+                        sách. mình vẽ ra cuộc sống đó dựa vào lời kể của tác giả và sự tưởng tượng của bản thân. y như
+                        vậy. mình được gặp nhiều người, với những tính cách khác nhau, họ kể những câu chuyện của riêng
+                        họ- có khi là những khúc đường nhỏ xí trong đời, có khi là một vài lát cắt trong những ngày
+                        thường nhật, có khi là một vài câu nói bông đùa, có khi cũng là những câu chào xã giao qua lại-
+                        nhưng tất cả giúp mình vẽ được thật nhiều bức tranh về cuộc sống của mọi người. những bức tranh
+                        ngắt quãng không gắn kết nhưng đẹp tuyệt vời. những bức tranh mà khi nào chợt nhớ lại, có thể sẽ
+                        mang đến một chút tiếng cười, một chút đăm chiêu, và để lại nhiều sự chiêm nghiệm. chứ mấy lần
+                        trong đời được thấy một tình yêu chả cần nói gì nhiều, yêu một cô gái tên Trúc là cưới về xong
+                        trồng luôn cả mấy bụi trúc xinh muốn xỉu đằng sau nhà?!
+                    </p>
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Lạ nhỉ, thường mình không thích con người lắm. nay lại thấy ngưỡng mộ con người. chắc do sau
+                        chuyến đi này, được gặp nhiều người tốt bụng, lại giỏi giang nữa, nên trong một khoảnh khắc cái
+                        câu nói “mây tầng nào sẽ gặp mây tầng đó” lại xuất hiện và bản thân gật gù xác nhận sự logic
+                        này. để cho thấy sự trưởng thành, mình tự hứa sẽ cố gắng phát triển bản thân, hoàn thiện mình
+                        mỗi này, vì mình tin rằng càng chăm chỉ thì sẽ càng may mắn. còn lại cuộc đời sẽ tự manifest
+                        itself. thì cũng phải qua nhiều cơn mưa mới thấy được cầu vồng và nắng chói chang chứ đúng
+                        không?!
+                    </p>
+                    <img style="width: 70%;max-height:20% ; margin: auto; display: flex;"
+                        src="/img/blog/pacific/0ab772_945468a61b5c445ca3bd9b5955c00fad~mv2.png" alt="">
+
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Chưa kể cái chuyến đi này còn mang mình quay lại cái thời trẻ trâu hét một tiếng cả lớp phải rén
+                        và cả trường phải nghe theo hồi cấp 2 nữa :)) họ nói đúng, những đứa bạn mà mình gặp lúc cấp 1,
+                        cấp 2 còn chơi tới giờ chính là những đứa chứng kiến mình lúc gớm nhất chả là cái gì, rồi lớn
+                        lên và thay đổi rõ nhất. và rồi lại quay lại cái chủ đề phải đi xa để lớn, thằng bạn mình chính
+                        là minh chứng việc có khi trường đời nó dạy mình khôn hơn nhiều mấy đứa được trường học dạy.
+                        phải đi mà gặp thật nhiều người để học hỏi và lớn lên. nhưng mà mình biết ơn thật nhiều, vì bạn
+                        bè mình dù là ở đâu đi nữa, chỉ bằng một tin nhắn khi gặp lại có thể cười nói như những đứa trẻ
+                        mười mấy tuổi chưa vào đời. dù sao thì chúng ta rốt cuộc cũng chỉ là những đứa trẻ mãi không
+                        muốn lớn thôi.
+                    </p>
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Mình của vài năm trước, rõ ràng là thích moi hết ruột gan ra để viết và chia sẻ cho mọi người
+                        thật nhiều suy nghĩ trong đầu. nhưng cũng là mình, cũng không phải quá lâu về trước, đã thấy rất
+                        thoải mái và nhẹ nhàng khi giữ những suy nghĩ cho riêng mình. nhất là khi mất đi một người quan
+                        trọng trong cuộc đời, tự nhiên giác ngộ luôn, mọi thứ trên đời thực sự chỉ là tạm thời, hoặc tạm
+                        bợ nghe cũng hay hay. mà khi đã biết không có gì là vĩnh viễn, ai chẳng muốn một lần được sống
+                        và làm những gì mình thích. chỉ là đôi khi thứ mình muốn lại có quá nhiều thứ ở giữa, ngăn mình
+                        lại, không cho mình được làm, mới đau chứ.
+                    </p>
+
+                    <img style="width: 70%;max-height:20% ; margin: auto; display: flex;"
+                        src="/img/blog/pacific/0ab772_4583183c1b684d2796a8ec6082b19974~mv2.png" alt="">
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        Nhiều người có thể đánh giá cuộc sống của người khác dựa vào mức thu nhập, số lượng chiếc xe,
+                        những bộ đồ hiệu và vô số những thứ vật chất khác trên đời. nhưng với mình, rõ ràng là những
+                        chuyến đi và những câu chuyện mà họ có được sau những chuyến đi đó chính là thứ mình nghĩ thực
+                        sự quý giá và ở lại lâu nhất. vật chất thì có thể mất đi, còn những câu chuyện thì ở lại vĩnh
+                        viễn. và mình nghĩ, thỉnh thoảng cũng nên tập viết lại những câu chuyện đó, như mình nói chẳng
+                        cần đầu đuôi gì hết, cứ viết thôi. dù để viết ra được những dòng này cũng không dễ gì với mình
+                        (vâng mình đã ngâm bài này suốt một tháng qua), một đứa cũng lâu lắm rồi coi việc viết lách là
+                        một bài thi quốc gia mà mình vô thi lại chằng muốn làm á.
+                        mà đời cũng ngộ! con bạn mình nó đi du lịch suốt, lại không thích viết (hoặc bận quá không có
+                        thời gian viết). còn mình ít khi đi chơi xa, lại thích ngồi ba hoa chích choè như này :))
+                    </p>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"When I write, I feel like an armless, legless man with a crayon in his mouth.”
+                            - Kurt Vonnegut</p>
+                    </blockquote>
+
+                    <div class="row mt-5" style="width: 80%; margin: auto; align-items: center;">
+                        <div class="col-sm-6">
+                            <img style="width: 70%; margin: auto; display: flex;"
+                                src="/img/blog/pacific/0ab772_074ddf96fb9f45948d6fe644fdd6e0d3~mv2.png" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                                Nếu cuộc đời chỉ vỏn vẹn trong 60 năm, mà mình sắp đi hết nửa cuộc đời rồi má ơi, thì
+                                liệu có bao nhiêu chuyến đi nữa trong đời mà mình có thể thực hiện nhỉ?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2" style="width: 80%; margin: auto; align-items: center;">
+                        <div class="col-sm-6">
+                            <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                                Sẽ có bao nhiêu lần được đi trong rừng ngẩng cổ nhìn lên những hàng cây xanh và tự thấy
+                                mình tan vào hết thảy những màu xanh đó?
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <img style="width: 70%; margin: auto; display: flex;"
+                                src="/img/blog/pacific/0ab772_83c48d858c6e44149e68a2cd9a0af72b~png.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row mt-5" style="width: 80%; margin: auto; align-items: center;">
+                        <div class="col-sm-6">
+                            <img style="width: 70%; margin: auto; display: flex;"
+                                src="/img/blog/pacific/0ab772_923f865aeca642f8a40bf2a1e9ddaffb~mv2.png" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                                Sẽ có bao nhiêu lần được ngắm những buổi hoàng hôn đẹp và chóng vánh như này nữa?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2" style="width: 80%; margin: auto; align-items: center;">
+                        <div class="col-sm-6">
+                            <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                                Sẽ có bao nhiêu lần được tự do đi những nơi mình muốn? Được một mình đi long nhong thành
+                                phố xa lạ ở Mỹ và tay cầm một cốc cà phê được làm từ Đà Lạt?
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <img style="width: 70%; margin: auto; display: flex;"
+                                src="/img/blog/pacific/0ab772_12a4a8a920404476ba9174abc07e9bbd~mv2.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row mt-5" style="width: 80%; margin: auto; align-items: center;">
+                        <div class="col-sm-6">
+                            <img style="width: 70%; margin: auto; display: flex;"
+                                src="/img/blog/pacific/0ab772_06b2f26c953c4a318bd71d578a165778~mv2.png" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                                Đang viết ngon lành, Nancy kêu đi ngủ xong thấy mình viết nhiều chữ quá nên trầm trồ bảo
+                                mình viết nhiều vậy có mỏi tay chưa. mấy đứa nhỏ này như kiểu chuông báo thức mỗi buổi
+                                sáng. tụi nó đưa cái đầu trên mây của mình về lại đất liền. cũng giống như khi mình vừa
+                                về nhà sau chuyến đi chơi. post vacation hit me hard. vừa về nhà là 3 đứa nhỏ tấn công
+                                hỏi dồn dập những câu hỏi, làm mình tỉnh ngang. à thì ra là giờ phải trở về thực tế hơi
+                                phũ phàng nì. dì mình còn nói chỉ có trúng số mới nghỉ làm để đi chơi hoài vậy thôi, chứ
+                                giờ thì tỉnh lại để còn đi cày. mà mình thì ít khi mua số. nên thôi hẹn chuyến đi sau
+                                nhe. till next time :)
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="mooli-regular" style="margin: 30px; text-align: justify;">
+                        P/s: mình thích viết cho bản thân mình đọc, thỉnh thoảng cũng thích viết cho vài người mình mến.
+                        và mình cực kì thích được đọc những thứ người khác viết cho mình nữa. tiếc là tới giờ cũng chưa
+                        có được mấy người thích làm điều đó như mình ( cũng đúng, nhắn tin nhanh và tiện hơn nhiều).
+                        mình có một cái hộp “love letter” đựng tất cả những lá thư, tấm thiệp mà mọi người viết cho mình
+                        suốt 7 năm nay ở Mỹ. mình trân trọng cực kì. và tự nhiên mình nghĩ, giá như mình có thể biến tất
+                        cả những happy moments, những khoảnh khắc sống động mà mình tận hưởng nó as its best, gói tất cả
+                        lại trong một cái hộp như cái hộp mà mình để dành những lá thư. để mỗi khi cái phần hoài cổ của
+                        mình nó trỗi dậy, mình chỉ việc mở cái hộp đó ra, và sống lại những khoảnh khắc tuyệt vời đó,
+                        được cười như vậy lần nữa…
+                    </p>
+
+                    <img style="width: 80%;max-height:50% ; margin: auto; display: flex;"
+                        src="/img/blog/pacific/0ab772_e619ecac579a4d69b2e53bcdeb3020c6~mv2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-dark w-50 text-center" style="display:flex; justify-content: center; margin: auto; margin-bottom: 20px; margin-top: 20px;" href="index.html">Back to home page</a>
+    </section>
+    
+
+    <!--Footer-->
+    <footer class="site-footer" style="width: 100%;">
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography"
+                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/"
+                                target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
