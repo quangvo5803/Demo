@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Awesome Dreamer Photography</title>
+    <link rel="icon"
+        href="/Bootstrap/img/kisspng-computer-icons-camera-photography-clip-art-5b20c89247ee67.5952202915288751542946.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+<style>
+    .content-item {
+        padding: 30px 0;
+        background-color: #FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color: #F0F0F0;
+        padding: 50px 0;
+        height: 100%;
+    }
+
+    .content-item h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .content-item h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin: 10px 0 15px;
+        padding: 0;
+    }
+
+    .content-headline {
+        height: 1px;
+        text-align: center;
+        margin: 20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color: #FFFFFF;
+        display: inline-block;
+        margin: -20px auto 0;
+        padding: 0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color: #F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size: 14px;
+        color: #AAAAAA;
+        display: block;
+    }
+
+    /* BOXES */
+
+    .box {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        margin: 30px 0 5px;
+        font-weight: bold;
+    }
+
+    .box ul {
+        margin: 0;
+    }
+
+    .box ul li {
+        font-size: 13px;
+        border-bottom: 1px dashed #DDDDDD;
+        padding: 10px 0;
+        font-weight: 600;
+    }
+
+    .box ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .box ul li i {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .box.categories ul li i {
+        color: #BBBBBB;
+        position: relative;
+        top: 2px;
+        width: 20px;
+    }
+
+    .posts ul li a {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
+    .posts ul li a:hover {
+        color: #333333;
+    }
+
+    .posts ul li div {
+        font-size: 13px;
+        color: #999999;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .box.posts ul li i {
+        color: #333333;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .box.tags ul.blog-tags li {
+        border: 0;
+    }
+
+    ul.blog-tags li {
+        padding: 7px 0;
+    }
+
+    div ul.blog-tags li i,
+    div .box.tags ul li i {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+    }
+
+    .blog p img.pull-left {
+        margin-right: 15px;
+    }
+
+    .blog p img {
+        max-width: 300px;
+        border: 3px solid #BBBBBB;
+        padding: 5px;
+    }
+
+    .blockquote {
+        font-size: 16px;
+        font-style: italic;
+        color: #555;
+        border-left: .25rem solid #ccc;
+        padding-left: 1rem;
+        margin: 0 30px;
+        width: 70%;
+    }
+
+    .img-fluid {
+        border-radius: 0.25rem;
+    }
+
+    .mooli-regular {
+        font-family: "Mooli", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+        .mooli-regular {
+            font-size: 12px;
+        }
+
+        .content-item h2,
+        .content-item h3,
+        .box h3,
+        .blockquote {
+            font-size: 16px;
+        }
+
+        .box ul li,
+        .posts ul li a,
+        .posts ul li div {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!--NAV MENU-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://t4.ftcdn.net/jpg/04/96/47/13/360_F_496471319_DbtjoUvKqyy2e9OfgBnK5mm2AXhKpa9m.jpg"
+                    alt="Bootstrap" height="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="margin-right: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-right: 50px;">Porfilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV MENU-->
+    <section class="content-item grey" id="blog-item">
+        <div class="container" style="max-width: 1200px; background-color: white;">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-12 blog">
+                    <h2 style="margin-left: 30px;">Five years. One note. A thousand thoughts.</h2>
+                    <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
+                        <li><i class="fa fa-calendar"></i>Jun 23,2021</li>
+                        <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                    </ul>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Ngày này 5 năm trước, có một con bé mới qua tuổi 19 được chừng 1 tháng, mệt nhoài sau chuyến bay
+                        dài lê thê chục tiếng để đến một đất nước xa lạ. Nơi xa nhất mà con bé từng đi có lẽ là một năm
+                        ở Đà Nẵng, một vài lần Sài Gòn và một lần Hà Nội phỏng vấn. Lúc đó còn chưa tin được nhắm mắt
+                        một cái đã nằm ngủ sô pha trong một kí túc xá ở Canyon, Mỹ. Sau 3 tháng ăn chực CMCC thì cuốn
+                        gói đi qua San Jose bắt đầu lại một lần nữa.
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Con bé đó chính là mình, đang ngồi đây ngơ ngác ngẫm lại 5 năm vừa qua nhanh như chớp mắt. Nếu
+                        mà để ngồi viết hết những thứ đã trải qua thì bài viết này chắc có thể thành một quyển sách.
+                        Nhưng vì khả năng viết đã trở nên có hạn sau từng ấy năm nên mình chỉ muốn viết một chút ci đó
+                        đặng 5,10 hay mấy chục năm sau ngồi đọc lại, à, thấy được cái sự ngáo ngơ của mình nó thay đổi
+                        (không biết là bớt hay nhìu lên nữa) 😂😂
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Mình cá là hầu hết mọi người chắc cũng đã một lần đọc được ở đâu đó những câu chuyện về du học
+                        sinh đi học ở đất khách quê người. Câu chuyện của mình chắc cũng không có khác ci nhìu hay (may
+                        quá) không có đặc sắc ci cho lắm mà kể cho hấp dẫn được. Mình còn may mắn vì có người thân ở
+                        cùng, dì chú chị mình dìu dắt cho qua được từng đó năm. Mình cũng gặp được nhìu người, nhìu thể
+                        loại người, để mà nhận ra một sự thực là mình coi người dở vl :))) nhưng thôi, những cái sai lầm
+                        làm người ta khôn lớn.
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        5 năm qua đi, mình tin nhìu hơn vào số phận-duyên nợ. Mình tin con đường mình đang đi ít nhìu có
+                        sự sắp xếp sẵn hay nói một cách ghê hơn là được an bài sẵn :)) ví dụ như, mình từng k nghĩ sẽ
+                        học ci liên quan đến medical tại mình k giỏi toán lí hoá sinh, cho đến khi mình trở thành trợ lí
+                        nha sĩ, sắp tới có thể là hygienist đi clean răng dạo :)) nghề chọn người thiệt k sai. Cái may
+                        mắn là mình thích điều mình đang làm và mình cố gắng để hoàn thiện thêm mỗi ngày. Tới giờ, đó
+                        chắc chắn là cột mốc đáng nhớ nhất trong suốt 5 năm qua. Vì đó giống như là cột mốc nói cho mình
+                        biết là, “ê Nhi mi hết nhỏ rồi, tới lúc xách mông lên ra đời đi làm, tới lúc lớn rồi Nhi!” Kiểu
+                        rứa đó. Mà ai sẵn sàng lớn lên chứ mình thì chưa, nên cứ lơ ngơ bị đời dập :))
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        5 năm rồi, gặp ai nhắn tin hay hỏi có nhớ nhà không là ưng quạu :))) thề luôn, thách cho đi chơi
+                        mô đó xa nhà chừng vài tháng coi có nhớ không :)) huống ci là một cô gái Huế tinh tế mong manh
+                        dễ vỡ như mình :))) chỉ là đôi khi, sự bận rộn làm con người mình k có đủ thời gian để nghĩ về
+                        thôi. Mà thôi thà bận rộn luôn cho đỡ nhớ nhà. Chứ cái ước mơ về nhà nằm đọc sách mẹ nuôi thì nó
+                        cứ ở mãi trong lòng.
+                        Mình thầm cảm ơn những người đã luôn ở lại với mình suốt 5 năm qua, cả nghĩa đen lẫn nghĩa bóng.
+                        Mình cảm ơn những sự dễ thương đến với mình đúng những khi cần. Mình biết cuộc đời cuồng quay dễ
+                        cuốn mình đi mất, nhưng có những thứ dễ thương nhỏ bé như này nhắc nhở mình, níu mình về những
+                        hoài niệm cũ....
+                    </p>
+
+                    <div class="row mt-5">
+                        <img src="img/blog/fiveyear/fiveyear1.png" style="width: 50%; display: flex; margin: auto;">
+                    </div>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Cảm ơn anh Thuần vì những tấm ảnh phim đẹp dã man, làm em nhớ nhà quá trời luôn
+                            :( ước chừng ci chừ được về nhà thăm ba mẹ, dẫn ba mẹ mình ra sông Hương đạp xe đạp..."</p>
+                    </blockquote>
+
+                    <div class="row mt-5" style="margin-left: 30px;">
+                        <div class="row">
+                            <div class="col-sm-4 col-4">
+                                <img src="img/blog/fiveyear/fiveyear2.png" style="width: 100%;">
+                            </div>
+                            <div class="col-sm-4 col-4">
+                                <img src="img/blog/fiveyear/fiveyear3.png" style="width: 100%;">
+                            </div>
+                            <div class="col-sm-4 col-4">
+                                <img src="img/blog/fiveyear/fiveyear4.png" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-3 col-3">
+                                <img src="img/blog/fiveyear/fiveyear5.png" style="width: 100%;">
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <img src="img/blog/fiveyear/fiveyear6.png" style="width: 100%;">
+                            </div>
+                            <div class="col-sm-6 col-6">
+                                <img src="img/blog/fiveyear/fiveyear7.png" style="width: 100%; max-height: 350px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Và người mà mình muốn cảm ơn nhất, đó chính là con bé 19 tuổi cách đây 5 năm đã dũng cảm một
+                        mình bước lên máy bay đi qua đây dù khi đó khóc lóc nước mắt nước mũi tèm lem thấy gớm :))) một
+                        lần dũng cảm để bây giờ nghĩ lại con đường dài 5 năm, cảm thấy bản thân ít nhìu thay đổi, có lúc
+                        tốt lúc xấu vì con người vốn dĩ không hoàn hảo. Nhưng mình chắc chắn là mình đã nỗ lực và cố
+                        gắng rất nhìu. Mình của ngày hôm nay nên cảm ơn chính mình vì đã không bỏ cuộc lúc cuộc đời
+                        không êm đềm. Mình của ngày hôm nay nên cảm ơn vì những nụ cười nước mắt, những trải nghiệm bài
+                        học đến từ cuộc đời. Mình của ngày hôm nay tự nhủ phải mạnh mẽ hơn nữa vì những sự bất ngờ khác
+                        ở chặng đường tiếp theo. Tương lai là thứ không ai dám khẳng định trước, nhưng mình tin, chỉ cần
+                        nỗ lực cố gắng, cuộc đời chắc chắn không phụ mình.
+                    </p>
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Những lúc mà mình mới bắt đầu đi làm ở văn phòng nha sĩ, đặc biệt là gần đây, thì vì mới nên ai
+                        chẳng sợ làm sai. Mình cực kì lo lắng mỗi khi làm những điều mới. Nhưng mà may mắn có những
+                        người làm chung lúc nào cũng động viên tinh thần mình. Họ luôn nói với mình là mi sẽ làm được
+                        thôi, mi sẽ ổn mà! (You will be fine!!) Xong nghĩ lại nó cũng giống như cuộc đời vậy, mình luôn
+                        sợ sệt khi thử điều mới. Sẽ có lúc thất bại, nhưng rồi cũng sẽ có ngày thành công tới. Miễn là
+                        mình cố gắng nỗ lực mỗi ngày, mọi thứ rồi sẽ ổn thôi.
+                        Everything will be fine!
+                    </p>
+                    <div class="col-12 col-sm-12">
+                        <img src="img/blog/fiveyear/fiveyear8.png" style="width: 60%; display: flex; margin: auto;">
+                    </div>
+                    <blockquote class="blockquote mb-5">
+                        Bên trái là mình năm 2016- cái sự ngây thơ trong sáng đ biết ci về cuộc sống :))
+                        bên phải là mình năm 2021- còn ngây thơ hay không, không ai biết, mình cũng không biết :))
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-dark w-50 text-center"
+            style="display:flex; justify-content: center; margin: auto; margin-bottom: 20px; margin-top: 20px;"
+            href="index.html">Back to home page</a>
+    </section>
+
+    <!--Footer-->
+    <footer class="site-footer" style="width: 100%;">
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography"
+                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/"
+                                target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
