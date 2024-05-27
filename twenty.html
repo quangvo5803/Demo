@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Awesome Dreamer Photography</title>
+    <link rel="icon"
+        href="/Bootstrap/img/kisspng-computer-icons-camera-photography-clip-art-5b20c89247ee67.5952202915288751542946.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+<style>
+    .content-item {
+        padding: 30px 0;
+        background-color: #FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color: #F0F0F0;
+        padding: 50px 0;
+        height: 100%;
+    }
+
+    .content-item h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .content-item h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin: 10px 0 15px;
+        padding: 0;
+    }
+
+    .content-headline {
+        height: 1px;
+        text-align: center;
+        margin: 20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color: #FFFFFF;
+        display: inline-block;
+        margin: -20px auto 0;
+        padding: 0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color: #F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size: 14px;
+        color: #AAAAAA;
+        display: block;
+    }
+
+    /* BOXES */
+
+    .box {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        margin: 30px 0 5px;
+        font-weight: bold;
+    }
+
+    .box ul {
+        margin: 0;
+    }
+
+    .box ul li {
+        font-size: 13px;
+        border-bottom: 1px dashed #DDDDDD;
+        padding: 10px 0;
+        font-weight: 600;
+    }
+
+    .box ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .box ul li i {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .box.categories ul li i {
+        color: #BBBBBB;
+        position: relative;
+        top: 2px;
+        width: 20px;
+    }
+
+    .posts ul li a {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
+    .posts ul li a:hover {
+        color: #333333;
+    }
+
+    .posts ul li div {
+        font-size: 13px;
+        color: #999999;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .box.posts ul li i {
+        color: #333333;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .box.tags ul.blog-tags li {
+        border: 0;
+    }
+
+    ul.blog-tags li {
+        padding: 7px 0;
+    }
+
+    div ul.blog-tags li i,
+    div .box.tags ul li i {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+    }
+
+    .blog p img.pull-left {
+        margin-right: 15px;
+    }
+
+    .blog p img {
+        max-width: 300px;
+        border: 3px solid #BBBBBB;
+        padding: 5px;
+    }
+
+    .blockquote {
+        font-size: 16px;
+        font-style: italic;
+        color: #555;
+        border-left: .25rem solid #ccc;
+        padding-left: 1rem;
+        margin: 0 30px;
+        width: 70%;
+    }
+
+    .img-fluid {
+        border-radius: 0.25rem;
+    }
+
+    .mooli-regular {
+        font-family: "Mooli", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+        .mooli-regular {
+            font-size: 12px;
+        }
+
+        .content-item h2,
+        .content-item h3,
+        .box h3,
+        .blockquote {
+            font-size: 16px;
+        }
+
+        .box ul li,
+        .posts ul li a,
+        .posts ul li div {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!--NAV MENU-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://t4.ftcdn.net/jpg/04/96/47/13/360_F_496471319_DbtjoUvKqyy2e9OfgBnK5mm2AXhKpa9m.jpg"
+                    alt="Bootstrap" height="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="margin-right: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-right: 50px;">Porfilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV MENU-->
+    <section class="content-item grey" id="blog-item">
+        <div class="container" style="max-width: 1200px; background-color: white;">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-12 blog">
+                    <h2 style="margin-left: 30px;">Let it be me!</h2>
+                    <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
+                        <li><i class="fa fa-calendar"></i>May 1,2019</li>
+                        <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                    </ul>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            <strong>Rose is red. Violet is blue.</strong><br>
+                            Ready or not. Today I’m 22!
+                        </p>
+                    </blockquote>
+
+                    <p class="mooli-regular mobile-text mt-5" style="width: 80% ;margin: auto; text-align: justify;">
+                        Yes, I’m turning to 22, today!<br>
+
+                        I remember that I was so excited to grow up and my birthday party was the greatest day of the
+                        year. As many children’s wish, I wanted to be matured as soon as possible so that I could do
+                        anything I want. However, time flies. People change. I soon figured out that being an adult is
+                        not as funny as I expected, at all. Ridiculously, I wish I could be a kid forever, or else, I
+                        could just be an
+                        18-year-old girl for an infinite time. I mean, I could have my birthday every single year, but
+                        my age would not go up. Forever 18! <br>                        
+                        Why? <br>
+                        <br>
+                        18 is the age that I still lived with my family without any worries about complicated stuff
+                        coming up. My youth was totally pink! How great it was to be young, wild and free! But at the
+                        point I reached 19 and went to study abroad in the U.S., I knew that I would never come back to
+                        my beautiful time. I knew that life is not as easy as I lived with my Mom. She was not beside me
+                        to deal with troubles. I knew that I had to be responsible for everything I did, not my Dad. I
+                        knew that I only had myself sometimes to talk with, not with my brother as usual...<br>
+
+                        Let forget about sad things! <br>
+                        <br>
+                        What I am trying to say is that you might miss a lot of things when you grow up. And you hardly
+                        notice that losing is happening until something bad knocks you out. An eagerness of being an
+                        innocent kid comes back. At some points in your life, you will think like me- wish to be a child
+                        forever.<br>
+
+                        But (everything behind this ‘but’ is more important), life is life and you have to grow up! You
+                        have to be the one who could cry badly in a car at night due to an argument with your co-worker,
+                        but in the next morning, you wake up and try to smile to go through the day. That is called
+                        maturity.<br>
+                        <br>
+                        And it is normal. We are happy, sad, excited, depressed all the time. Nevertheless, trust me,
+                        find someone to talk with whenever you feel empty from inside. It might be not a piece of wise
+                        advice from a 22-year-old girl who knows nothing about life (yes, it’s me!). But I believe, as
+                        long as you have someone to confide with and you release the best version of you in front of
+                        them, you will find hard to get lost in this crazy life.<br>
+
+                        Recently, I fell in love with Ray LaMontagne music. He has such a beautiful song named “Let it
+                        be me”. You should listen to his music by any chance since it saved my soul naturally. The song
+                        basically points out a simple thing. If you need someone to talk, to call or to share anything
+                        in your life, LET IT BE ME! And who knows, I will need you to listen to my stupid stuff or to
+                        read these crazy things. If then, LET IT BE ME! :) <br>
+                        <hr>
+                        P/s: Happy 22nd birthday to me! :)     
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <a class="btn btn-dark w-50 text-center"
+            style="display:flex; justify-content: center; margin: auto; margin-bottom: 20px; margin-top: 20px;"
+            href="index.html">Back to home page</a>
+    </section>
+
+    <!--Footer-->
+    <footer class="site-footer" style="width: 100%;">
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography"
+                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/"
+                                target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
