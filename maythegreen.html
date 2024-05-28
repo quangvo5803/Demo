@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Awesome Dreamer Photography</title>
+    <link rel="icon"
+        href="/Bootstrap/img/kisspng-computer-icons-camera-photography-clip-art-5b20c89247ee67.5952202915288751542946.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+<style>
+    .content-item {
+        padding: 30px 0;
+        background-color: #FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color: #F0F0F0;
+        padding: 50px 0;
+        height: 100%;
+    }
+
+    .content-item h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .content-item h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin: 10px 0 15px;
+        padding: 0;
+    }
+
+    .content-headline {
+        height: 1px;
+        text-align: center;
+        margin: 20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color: #FFFFFF;
+        display: inline-block;
+        margin: -20px auto 0;
+        padding: 0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color: #F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size: 14px;
+        color: #AAAAAA;
+        display: block;
+    }
+
+    /* BOXES */
+
+    .box {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        margin: 30px 0 5px;
+        font-weight: bold;
+    }
+
+    .box ul {
+        margin: 0;
+    }
+
+    .box ul li {
+        font-size: 13px;
+        border-bottom: 1px dashed #DDDDDD;
+        padding: 10px 0;
+        font-weight: 600;
+    }
+
+    .box ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .box ul li i {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .box.categories ul li i {
+        color: #BBBBBB;
+        position: relative;
+        top: 2px;
+        width: 20px;
+    }
+
+    .posts ul li a {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
+    .posts ul li a:hover {
+        color: #333333;
+    }
+
+    .posts ul li div {
+        font-size: 13px;
+        color: #999999;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .box.posts ul li i {
+        color: #333333;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .box.tags ul.blog-tags li {
+        border: 0;
+    }
+
+    ul.blog-tags li {
+        padding: 7px 0;
+    }
+
+    div ul.blog-tags li i,
+    div .box.tags ul li i {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+    }
+
+    .blog p img.pull-left {
+        margin-right: 15px;
+    }
+
+    .blog p img {
+        max-width: 300px;
+        border: 3px solid #BBBBBB;
+        padding: 5px;
+    }
+
+    .blockquote {
+        font-size: 16px;
+        font-style: italic;
+        color: #555;
+        border-left: .25rem solid #ccc;
+        padding-left: 1rem;
+        margin: 0 30px;
+        width: 70%;
+    }
+
+    .img-fluid {
+        border-radius: 0.25rem;
+    }
+
+    .mooli-regular {
+        font-family: "Mooli", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+        .mooli-regular {
+            font-size: 12px;
+        }
+
+        .content-item h2,
+        .content-item h3,
+        .box h3,
+        .blockquote {
+            font-size: 16px;
+        }
+
+        .box ul li,
+        .posts ul li a,
+        .posts ul li div {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!--NAV MENU-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://t4.ftcdn.net/jpg/04/96/47/13/360_F_496471319_DbtjoUvKqyy2e9OfgBnK5mm2AXhKpa9m.jpg"
+                    alt="Bootstrap" height="40px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="margin-right: 50px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-right: 50px;">Porfilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV MENU-->
+    <section class="content-item grey" id="blog-item">
+        <div class="container" style="max-width: 1200px; background-color: white;">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-12 blog">
+                    <h2 style="margin-left: 30px;">Five years. One note. A thousand thoughts.</h2>
+                    <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
+                        <li><i class="fa fa-calendar"></i>Jun 23,2021</li>
+                        <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                    </ul>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            "May, more than any other month of the year, wants us to feel most alive." - Fennel
+                            Hudson
+                        </p>
+                    </blockquote>
+
+                    <div class="row mt-5">
+                        <img style="width: 70%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreencover.png" alt="">
+                    </div>
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        “Are you serious, Nhi? You aren’t joking right?” <br>
+                        Đó là câu hỏi đầu tiên của chị đồng nghiệp khi nghe mình bay xuống San Diego chơi trong ngày
+                        sinh nhật của mình. Chính xác hơn là, bay đi bay về trong ngày. Và mình biết cái biểu cảm đó,
+                        đúng ra là quen với nó, vì người nhà mình cũng có biểu cảm y chang :))
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Mình tự tạo ra một truyền thống cá nhân, kéo dài cũng được nhiều năm, đó là không đi làm trong
+                        ngày sinh nhật. Mình sợ ngày đầu tuổi mới mà không suôn sẻ thì cả năm sml. Đó là suy nghĩ hồi
+                        còn trẩu nó vậy :)) còn giờ trưởng thành rồi, suy nghĩ vẫn thế thôi :)) với cả nghỉ làm có
+                        lương, mắc gì không nghỉ 😂<br>
+                        Đùa chứ cách đó vài tháng là mình đã plan một chuyến get away trong ngày sinh nhật mình rồi.
+                        Trời tính như nào chứ lúc đó Southwest lại on-sale tickets bay lòng vòng Cali, xong mình dùng
+                        points mình sẵn có nữa, vậy là được hẳn chuyến bay almost free luôn, chỉ tốn mỗi fee cho TSA.
+                        Nên mình nghĩ, hmmm, why not? thêm nữa, tại sao không đi quẩy khi mà mình nhận được email được
+                        nhận vào nursing program trước ngày sinh nhật chứ? .screaming inside. (mẹ mình nói đậu rớt gì
+                        cũng đi chơi cho thoải mái, nay thì quá là thoải mái rồi \m/)
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Mình thích cái cảm giác được tới một chỗ mới, một nơi mà không một ai biết tới mình hết, không
+                        lo sẽ gặp người quen rồi small talks các thứ, và mình làm gì cũng không phải để ý xung quanh vì
+                        sợ họ nghĩ mình weird (nhưng mà mình weird thật, nên may quá đây chỉ là short trip)
+                    </p>
+
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen1.png" alt="">
+                    </div>
+
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Mình đi nhiều hơn mình dự tính, và rõ ràng là còn nhiều nơi nữa mà mình vẫn muốn đi cho biết
+                            , nhưng mà mình mãn nguyện vì 12 tiếng tuyệt vời ở SD ngày hôm đó!
+                        </p>
+                    </blockquote>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Mình cũng không nhớ từ cái tuổi nào là mình không thích ăn mừng sinh nhật rộn ràng nữa. Mấy năm
+                        gần đây mình còn kiểu rất ngại khi đứng nghe mọi người hát mừng sinh nhật mình á (mình hát mừng
+                        cho mọi người thì thoải mái). Với cả sau khi được mẹ mình spoil 19 cái sinh nhật không thiếu một
+                        năm nào, thì mình thấy là mình ăn tiệc đủ rồi. Nhắc lại thấy thương mẹ mình, vì con mà làm tất
+                        cả mọi thứ. Sinh nhật mình từ nhỏ tới khi 19 tuổi lúc nào cũng hoành tráng, tới mức một thằng
+                        bạn mình còn nói đi ăn sinh nhật con Nhi mà tưởng đi ăn đám cưới nữa :)) tính ra là mình sinh
+                        đúng ngày quốc tế lao động (chỉ tính ở Việt Nam), ba mẹ mình hay nói sinh nhật mình là cả thế
+                        giới nghỉ làm để chúc mừng mình á. Nhỏ mà ai nói gì cũng tin, hãnh diện vch luôn. Lớn rồi mới
+                        thấy, à thì ra sinh đúng ngày quốc tế lao động, cả đời đi lao động :))
+                    </p>
+
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen2.png" alt="">
+                    </div>
+                    <div class="row mt-1">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen3.png" alt="">
+                    </div>
+
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Lao động nhiều thì cũng phải đi quẩy nhiều chứ. work life balance :)) prob not gonna happen
+                            next 2 yrs but...
+                        </p>
+                    </blockquote>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Không thích được hát mừng sinh nhật, nhưng rất vui vì được chúc mừng sinh nhật, đặc biệt là
+                        những lời chúc đến từ những người lạ. Đó là cái cô lúc check ID khi mình lấy xe, sau khi cho
+                        mình qua thì ráng ngoái đầu lại để chúc mừng sinh nhật mình. Có cả bạn làm ở Starbucks khi mình
+                        redeem cái gift cũng cười tươi cmsn mình tới 2 lần nữa. Nghĩ thử coi, gia đình bạn bè biết ngày
+                        sinh của mình là một sự đặc biệt rồi, đây còn cả người lạ chỉ lướt qua đời mình một khoảnh khắc
+                        thôi, mà người ta chúc mừng sinh nhật mình, cảm kích lạ thường luôn á!
+                    </p>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Một trong những thứ mình rất thích trong bất kì chuyến đi nào của mình đó là những cuộc nói
+                        chuyện chớp nhoáng với người lạ. Viết tới đây mình thấy mình kiểu rất conflict nha. Mình từng
+                        không thích small talks, có lẽ tới giờ vẫn không thích, chỉ là thấy có thể chịu đựng được lúc
+                        cần thiết. Nhưng đi chơi đâu lạ thì mình thấy small talks cũng ok, những câu chuyện không cần
+                        đầu đuôi, đủ để biết một chút về nhau, và giúp mình biết hơn một xíu về nơi mình đang visit.
+                        Mình cảm ơn cái anh làm ở chỗ mình mướn xe đã recommend mình đi thử cái trail nổi tiếng ở San
+                        Diego dù ảnh biết là mình có plan đi hike vào buổi chiều rồi. Mà lại đúng ngay cái trail ông bác
+                        sĩ làm chung đã nói mình biết ngay chiều hôm trước khi bay. Tín hiệu vũ trụ! Mình có hỏi liệu có
+                        khả quan không khi hike 2 chỗ đó trong cùng một ngày. Thì ảnh tỉnh bơ luôn kêu uống nước nhiều
+                        vô thì mày sẽ ok thôi 🤡 chỉ tiếc cho anh thấy mình đội mũ SF thì không ok chút nào vì Dodgers
+                        của anh mùa rồi thua quá 😂
+                    </p>
+
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen4.png" alt="">
+                    </div>
+
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Cowles Mountain Trail. Leo mất 1 tiếng 20 phút. Có thể sống sót được với một chai nước nhưng
+                            hơi lê lết mà nắng nóng lắm luôn. À có một cái tradition mà mấy người hike cùng bảo mình,
+                            phải chạm tay vào cái tảng đá có tên của chỗ hike này thì mới tính là mình đã achieve được
+                            nó rồi :)
+                        </p>
+                    </blockquote>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Isnt it fun to do such random things in a completely new place on your birthday? Chưa kể lúc
+                        nhìn ra bầu trời khi mới đáp xuống, mình nghĩ trong đầu, “chết thật, đi chơi chuyến này là cả vũ
+                        trụ ủng hộ mình rồi”. Như kiểu tất cả sự may mắn trong một năm dồn hết vào ngày hôm đó vậy.
+                        Chuyến bay của mình không bị delay, bay rất là smooth tới nỗi lúc về mém ngủ quên. Mình tới được
+                        hết tất cả những chỗ mà mình đã plan, có đi thêm những chỗ kiểu nó rất random trên đường đi thì
+                        mình ghé vào luôn. Trước giờ đi hike thì người ta chỉ nghĩ là đi leo núi, đi lên chỗ cao. Hôm đó
+                        là lần đầu tiên được đi hike mà đi dọc biển. Có đoạn tưởng mình đi lạc. Quan trọng hơn cả là gặp
+                        toàn những người dễ thương thôi. Ai cũng kiểu tươi cười, nhẹ nhàng, hoan hỉ với mình á. Trong
+                        một thoáng chốc mình nghĩ, ủa bộ mọi người biết nay sinh nhật mình nên treat mình with extra
+                        care hay sao ta?! Rồi còn được ăn những món ăn mình thích, hít thở đầy lồng ngực cái mùi biển
+                        mặn mặn tanh tanh của mấy con hải cẩu. Gió táp táp vào mặt, và nắng nhè nhẹ chứ không gắt, làm
+                        nên một perfect day cho mình.
+                        I was lowkey so happy! T.T
+                    </p>
+
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen5.png" alt="">
+                    </div>
+
+                    <blockquote class="blockquote mt-5"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Thật sự là nhìn bầu trời này lúc mới đáp vừa vui vì sự vi diệu của nó, nhưng cũng lo nha,
+                            nghĩ ủa chứ giờ mà cả ngày cứ âm u mây mù như này thì coi như đi tong chuyến đi này rồi. Hên
+                            ghê, vài tiếng sau thì trời chuyển nắng đẹp dã man!
+                        </p>
+                    </blockquote>
+
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen6.png" alt="">
+                    </div>
+
+                    <div class="row mt-1">
+                        <img style="width: 70%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen7.png" alt="">
+                    </div>
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Lần đầu đi hike đường biển ở Torrey Pines. lúc đó thấy hơi đuối rồi nhưng dopamine hit dữ
+                            quá, nature heals me quá nên cứ đi cho hết trail thôi, chân không còn cảm giác gì mấy nữa
+                            rồi :))
+                        </p>
+                    </blockquote>
+
+                    <div class="row mt-5">
+                        <img style="width: 70%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen8.png" alt="">
+                    </div>
+                    <div class="row mt-1">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen9.png" alt="">
+                    </div>
+                    <blockquote class="blockquote mt-3"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            trước khi đi mình cũng đắn đo không biết là nên coi sunset ở đâu. nhân danh một sunset lover
+                            hay ảo tưởng tự tin tới đâu mặt trời sẽ cho beautiful sunset tới đó. cuối cùng thì mình chọn
+                            Sunset Cliffs thay vì ở lại La Jolla, mặc dù đúng là La Jolla đẹp nhất SD rồi đó.
+                        </p>
+                    </blockquote>
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen10.png" alt="">
+                    </div>
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            và tuyệt vời chưa sự lựa chọn này thiệt là đỉnh quá rồi :))) kiểu tới giờ về mà lái đi không
+                            nỡ luôn á. Tới tận chỗ trả xe, chờ để ra sân bay mà vẫn nhìn thấy được quả mặt trời to đùng
+                            hoành tráng đập thẳng vào mặt. tôi không hề giỏi manifest nhưng ngày hôm đó tôi có thể mạnh
+                            dạn nói là tôi đã manifest coi sunset thành công T.T
+                        </p>
+                    </blockquote>
+                    <blockquote class="blockquote mt-5">
+                        <p class="mb-0">"“When you want something, all the universe conspires in helping you to achieve
+                            it.” - The Alchemist by Paulo Coelho</p>
+                    </blockquote>
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        Trước đây, ngày sinh nhật luôn là ngày của mình, dành cho mình. Nhưng bây giờ, ngày sinh nhật
+                        mình là ngày mình dành để biết ơn ba mẹ mình, đã cho mình một cuộc đời được tự do làm những điều
+                        mình muốn. Và thật sự để sống hạnh phúc một cuộc đời cũng là một cách để cho ba mẹ mình yên tâm,
+                        và mình nghĩ, đó cũng là một cách báo hiếu tuyệt vời nhất, nhỉ?
+                    </p>
+                    <div class="row mt-5">
+                        <img style="width: 75%;max-height:100% ; margin: auto; display: flex;"
+                            src="img/blog/maythegreen/maythegreen11.png" alt="">
+                    </div>
+                    <blockquote class="blockquote mt-2"
+                        style="display: flex; margin: auto; background-color: #ccc; font-size: 20px; padding: 10px;">
+                        <p class="mb-0">
+                            Mình thích cái cảm giác tự do được làm những thứ mình muốn. Và mình biết ơn mỗi ngày vì điều
+                            đó! <br>
+                            <a href="https://www.youtube.com/watch?v=87SVbp_sGX0"
+                                target="_blank" style="text-decoration: none; font-style: normal;">https://www.youtube.com/watch?v=87SVbp_sGX0</a>
+                        </p>
+                    </blockquote>
+
+                    <div class="text-center">
+                        <h3 class="mb-5"><strong style="font-size: 24px; font-family: cursive;">
+                                Happy birthday, Nhi! May
+                                first or "lucky" first :)
+                                người may mắn đầu tiên?!
+                            </strong></h3>
+                    </div>
+
+                    <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
+                        p/s: Tính ra năm nay sinh nhật chưa thổi cây nến nào á. Vậy là forever tuổi 26? :)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a class="btn btn-dark w-50 text-center"
+        style="display:flex; justify-content: center; margin: auto; margin-bottom: 20px; margin-top: 20px;"
+        href="index.html">Back to home page</a>
+    </section>
+
+    <!--Footer-->
+    <footer class="site-footer" style="width: 100%;">
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography"
+                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/"
+                                target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
