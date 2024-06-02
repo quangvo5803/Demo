@@ -17,6 +17,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="stylesheet" href="venobox/venobox.min.css">
 </head>
 <style>
     .content-item {
@@ -237,6 +238,9 @@
                     <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
                         <li><i class="fa fa-calendar"></i>Jun 23,2021</li>
                         <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+                        <li>
+                            <i class="fa fa-eye"></i>Number of visits: <span id="visit-count">Loading...</span>
+                        </li>
                     </ul>
 
                     <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
@@ -288,7 +292,9 @@
                     </p>
 
                     <div class="row mt-5">
-                        <img src="img/blog/fiveyear/fiveyear1.png" style="width: 50%; display: flex; margin: auto;">
+                        <a class="venobox" data-gall="gallery01" data-fitview="true"
+                            href="img/blog/fiveyear/fiveyear1.png"> <img src="img/blog/fiveyear/fiveyear1.png"
+                                style="width: 50%; display: flex; margin: auto;"></a>
                     </div>
 
                     <blockquote class="blockquote">
@@ -299,24 +305,36 @@
                     <div class="row mt-5" style="margin-left: 30px;">
                         <div class="row">
                             <div class="col-sm-4 col-4">
-                                <img src="img/blog/fiveyear/fiveyear2.png" style="width: 100%;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear2.png"> <img src="img/blog/fiveyear/fiveyear2.png"
+                                        style="width: 100%;"></a>
                             </div>
                             <div class="col-sm-4 col-4">
-                                <img src="img/blog/fiveyear/fiveyear3.png" style="width: 100%;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear3.png"> <img src="img/blog/fiveyear/fiveyear3.png"
+                                        style="width: 100%;"></a>
                             </div>
                             <div class="col-sm-4 col-4">
-                                <img src="img/blog/fiveyear/fiveyear4.png" style="width: 100%;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear4.png"> <img src="img/blog/fiveyear/fiveyear4.png"
+                                        style="width: 100%;"></a>
                             </div>
                         </div>
                         <div class="row mt-2">
                             <div class="col-sm-3 col-3">
-                                <img src="img/blog/fiveyear/fiveyear5.png" style="width: 100%;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear5.png"> <img src="img/blog/fiveyear/fiveyear5.png"
+                                        style="width: 100%;"></a>
                             </div>
                             <div class="col-sm-3 col-3">
-                                <img src="img/blog/fiveyear/fiveyear6.png" style="width: 100%;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear6.png"> <img src="img/blog/fiveyear/fiveyear6.png"
+                                        style="width: 100%;"></a>
                             </div>
                             <div class="col-sm-6 col-6">
-                                <img src="img/blog/fiveyear/fiveyear7.png" style="width: 100%; max-height: 350px;">
+                                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                                    href="img/blog/fiveyear/fiveyear7.png"> <img src="img/blog/fiveyear/fiveyear7.png"
+                                        style="width: 100%; max-height: 350px;"></a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +360,10 @@
                         Everything will be fine!
                     </p>
                     <div class="col-12 col-sm-12">
-                        <img src="img/blog/fiveyear/fiveyear8.png" style="width: 60%; display: flex; margin: auto;">
+                        <a class="venobox" data-gall="gallery01" data-fitview="true"
+                            href="img/blog/fiveyear/fiveyear8.png"> <img src="img/blog/fiveyear/fiveyear8.png"
+                                style="width: 60%; display: flex; margin: auto;"></a>
+
                     </div>
                     <blockquote class="blockquote mb-5">
                         Bên trái là mình năm 2016- cái sự ngây thơ trong sáng đ biết ci về cuộc sống :))
@@ -389,6 +410,28 @@
             </div>
         </div>
     </footer>
+    <script src="venobox/venobox.min.js"></script>
+    <script src="venobox/custom.js"></script>
+    <script>
+        // Lấy URL hiện tại
+        const pageKey = window.location.pathname;
+
+        // Kiểm tra xem số lần truy cập của trang này đã được lưu trữ chưa
+        let visitCount = localStorage.getItem(pageKey);
+        if (visitCount) {
+            // Nếu có, tăng số lần truy cập
+            visitCount = parseInt(visitCount) + 1;
+        } else {
+            // Nếu không, khởi tạo số lần truy cập là 1
+            visitCount = 1;
+        }
+
+        // Lưu lại số lần truy cập mới
+        localStorage.setItem(pageKey, visitCount);
+
+        // Hiển thị số lần truy cập trên trang web
+        document.getElementById('visit-count').textContent = visitCount;
+    </script>
 </body>
 
 </html>
