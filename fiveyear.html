@@ -238,9 +238,6 @@
                     <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px;">
                         <li><i class="fa fa-calendar"></i>Jun 23,2021</li>
                         <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
-                        <li>
-                            <i class="fa fa-eye"></i>Number of visits: <span id="visit-count">Loading...</span>
-                        </li>
                     </ul>
 
                     <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify;">
@@ -412,26 +409,6 @@
     </footer>
     <script src="venobox/venobox.min.js"></script>
     <script src="venobox/custom.js"></script>
-    <script>
-        // Lấy URL hiện tại
-        const pageKey = window.location.pathname;
-
-        // Kiểm tra xem số lần truy cập của trang này đã được lưu trữ chưa
-        let visitCount = localStorage.getItem(pageKey);
-        if (visitCount) {
-            // Nếu có, tăng số lần truy cập
-            visitCount = parseInt(visitCount) + 1;
-        } else {
-            // Nếu không, khởi tạo số lần truy cập là 1
-            visitCount = 1;
-        }
-
-        // Lưu lại số lần truy cập mới
-        localStorage.setItem(pageKey, visitCount);
-
-        // Hiển thị số lần truy cập trên trang web
-        document.getElementById('visit-count').textContent = visitCount;
-    </script>
 </body>
 
 </html>
