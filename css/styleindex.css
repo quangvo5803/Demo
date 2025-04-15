@@ -246,7 +246,7 @@ html {
   width: 90px;
   height: 3px;
   top: 50%;
-  left: -100px;
+  left: -110px;
   background: #B3CCBB;
 }
 
@@ -256,6 +256,6 @@ html {
   width: 90px;
   height: 3px;
   top: 50%;
-  right: -100px;
+  right: -110px;
   background: #B3CCBB;
 }
