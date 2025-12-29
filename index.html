@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Awesome Dreamer Photography</title>
   <link rel="icon" href="/img/index/tablogo.webp">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styleindex.css">
-  <link rel="stylesheet" href="js/animate/animate.min.css" />
-  <link rel="stylesheet" href="js/owlcarousel/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="js/tempusdominus/css/tempusdominus-bootstrap-4.min.css" />
-  <link rel="stylesheet" href="venobox/venobox.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://db.onlinewebfonts.com/c/3a626358e1ce53288991d25763b06e95?family=Recoleta+SemiBold" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Photo Collage Section */
+    .collage-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 250px);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-
+    
+  </style>
 </head>
-
 <body>
-  <!--NAV MENU-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid" style="background-color: white;">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid px-5">
       <a class="navbar-brand" href="index.html">
-        <img src="img/index/logo.webp" alt="Bootstrap" height="40px">
+        <img src="img/index/logo.webp" alt="Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <div class="navbar-title">
+        <h2>Awesome Dreamer Photography</h2>
+      </div>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 80px;">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px; margin: auto;">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html" style="margin-right: 50px;">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="portfolio.html" style="margin-right: 50px;">Portfolio</a>
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="album.html" style="margin-right: 50px;">Album</a>
+            <a class="nav-link" href="album.html">Album</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog.html">Blog</a>
@@ -48,280 +68,294 @@
       </div>
     </div>
   </nav>
-  <!--END NAV MENU-->
-  <!--Slide-->
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000"
-    style="width: 100%; margin: 10px auto 5px ;">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 0"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 6"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 7"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 8"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 9"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 10"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" aria-label="Slide 11"></button>
+
+  <section class="hero">
+  <img src="img/index/1.webp" alt="Hero Image" class="hero-img">
+  <div class="hero-overlay"></div>
+</section>
+
+
+  <!-- Hero Carousel -->
+<section class="loop-carousel mt-5">
+  <button class="lc-btn prev">‹</button>
+
+  <div class="lc-viewport">
+    <div class="lc-track" id="lcTrack">
+
+      <a href="tonyfall.html" class="lc-item"><img src="img/index/3.webp"></a>
+      <a href="lily.html" class="lc-item"><img src="img/index/4.webp"></a>
+      <a href="jayla2.html" class="lc-item"><img src="img/index/5.webp"></a>
+      <a href="vrushali.html" class="lc-item"><img src="img/index/6.webp"></a>
 
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="img/jayla2/jayla5.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block" style="color: white;">Two Cute to Handle: Jayla's Birthday Bash</h5>
-          <p class="d-none d-md-block" style="color: white;">Each laugh, twirl, and sparkle in Jayla’s eyes tells a heartfelt story of her second birthday. Witnessing her joy as she explores the vibrant park and plays with her family fills my heart with warmth.  </p>
-          <a class="btn btn-dark" href="jayla2.html" style=" color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/vrushali/vrushali39.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block" style="color: white;">Vrushali's maternity</h5>
-          <p class="d-none d-md-block" style="color: white;">This album captures the quiet strength, gentle beauty, and
-            heartfelt joy of
-            motherhood
-            in bloom. Every
-            photo tells a story of life growing, love deepening, and the radiant glow that only a mother-to-be
-            can
-            carry. </p>
-          <a class="btn btn-dark" href="vrushali.html" style=" color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item ">
-        <img src="img/decadeoflove/decadeoflove62.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-dark">
-          <h5 class="d-none d-md-block text-white">Decade of love: Our Journey Together</h5>
-          <p class="d-none d-md-block text-white"> Celebrating a decade of love, laughter, and unforgettable moments
-            together. Here’s to many more adventures! 💖</p>
-          <a class="btn btn-dark" href="decadeoflove.html">See more</a>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/tonyfall/tonyfall1.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block" style="color: white;">Our neighbor area in San Jose. </h5>
-          <p class="d-none d-md-block" style="color: white;">This photoshoot was quickly taken only 30 minutes before
-            sunset on an autumn afternoon in 2019. So far it is still one of my favorites albums I've taken for my
-            cousins. </p>
-          <a class="btn btn-dark" href="tonyfall.html" style=" color:white">See more</a>
-        </div>
-      </div>
-      
-      <div class="carousel-item">
-        <img src="img/adrianafam/adriana26.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-dark">
-          <h5 class="d-none d-md-block text-white">Adriana Family</h5>
-          <p class="d-none d-md-block text-white"> A Decade of Laughter, Love, and Milestones - Our Cherished Family
-            Journey</p>
-          <a class="btn btn-dark" href="adrianafam.html">See more</a>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/index/Slider7.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-white">
-          <h5 class="d-none d-md-block">Lily</h5>
-          <p class="d-none d-md-block"> Here's to two years of cherished memories and a love that knows no bounds. </p>
-          <a class="btn btn-dark" href="lily.html" style="color:white">See more</a>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/index/Slider1.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block">Vong Family</h5>
-          <p class="d-none d-md-block">A good marriage isn't something you find. It's something you make, and you have
-            to keep on making it. </p>
-          <a class="btn btn-dark" href="vongfamily.html" style=" color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/index/Slider2.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block">Annie</h5>
-          <p class="d-none d-md-block">Well, look who just turned 17!! I was so glad to capture these pictures for my
-            beautiful friend, Annie. Happy 17th birthday! Growing and glowing! </p>
-          <a class="btn btn-dark" href="annie.html" style=" color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/index/Slider3.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="d-none d-md-block" style="color: white;">10 Year Anniversary.</h5>
-          <p class="d-none d-md-block" style="color: white;">It was a pleasure to be their memories keeper last week.
-            Thank you for trusting me
-            and being my valued client. Can't wait to witness their love for the next decades!</p>
-          <a class="btn btn-dark" href="tenyear.html" style="color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/index/Slider6.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-white">
-          <h5 class="d-none d-md-block">Municipal Rose Garden, San Jose.</h5>
-          <p class="d-none d-md-block">The Vong family made my photoshoot comfortable and relaxing. I was able to
-            capture one of the most beautiful smiles of these cute family members. </p>
-          <a class="btn btn-dark" href="vongfamily2.html" style="color:white">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/index/Slider5.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-dark">
-          <h5 class="d-none d-md-block">Purple Adobe Lavender Farm, Abiquiu, New Mexico.</h5>
-          <p class="d-none d-md-block">Back to summer 2016 when I first met Chi in Canyon, we had a photoshoot for her
-            graduation. I have always
-            been so grateful for this friendship. We always had our ways to support each other.</p>
-          <a class="btn btn-dark" href="mattbrown.html">See more</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/hagrade/hagrade20.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-md-block text-dark">
-          <h5 class="d-none d-md-block text-white">Tassel turned, and new adventures begin.</h5>
-          <p class="d-none d-md-block text-white">Diploma in hand, the world awaits.
-            Congrats to the class of 2024!! ❤</p>
-          <a class="btn btn-dark" href="hagrad.html">See more</a>
-        </div>
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-  <!--End Slide-->
-  <section class="py-5" style="background-color: black;">
-    <div class="container">
-      <div class="row align-items-center gx-4">
-        <div class="col-md-5">
-          <div class="ms-md-2 ms-lg-5"><a class="venobox" data-fitview="true" href="img/index/about.webp"
-              data-title="about" data-gall="myGall"> <img class="img-fluid rounded-3" src="img/index/about.webp"></a>
-          </div>
-        </div>
-        <div class="col-md-6 offset-md-1">
-          <div class="ms-md-2 ms-lg-5 mt-3">
-            <span class="text-white" style="font-size: 16px;">My Story</span>
-            <h2 class="display-5 fw-bold text-white mt-2">About me</h2>
-            <p class="lead text-white" style="font-size: 24px;">I believe there is extraordinary beauty in the simplest
-              of moments. And that beautiful moments deserve awesome photographs.</p>
-          </div>
-        </div>
+
+  <button class="lc-btn next">›</button>
+</section>
+
+
+  <!-- Latest Works Section - Using Bootstrap -->
+  <section class="bg-light py-5">
+  <div class="container py-4">
+    <div class="row mb-5 text-center text-lg-start">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="display-3 fw-light mb-2 text-dark fs-6">Latest works</h2>
+        <p class="text-secondary text-uppercase" style="letter-spacing:2px;font-size:.9rem;">
+          2025 PROJECTS
+        </p>
       </div>
-    </div>
-  </section>
-  <!-- Feedback Start -->
-  <div class="container-xxl py-5">
-    <div class="container">
-      <div class="text-center">
-        <h4 class="heading-with-lines"><strong id="main-heading" style="font-size: 48px; font-family: cursive; color: 
-            #B3CCBB;">Feedback</strong></h4>
-        <h1 class="mb-5">My Clients Say!!!</h1>
-      </div>
-      <div class="owl-carousel testimonial-carousel">
-        <div class="testimonial-item bg-transparent border rounded p-4">
-          <i class="fa fa-quote-left fa-2x text-dark mb-3"></i>
-          <p>
-            The photoshot was amazing. You made it fun for us. Thanh you for taking the time out from your busy schedule
-            to do this for us.
-          </p>
-          <div class="d-flex align-items-center">
-            <img class="img-fluid flex-shrink-0 rounded-circle"
-              src="https://static.vecteezy.com/system/resources/previews/001/912/726/non_2x/beautiful-woman-in-frame-circular-avatar-character-free-vector.jpg"
-              style="width: 50px; height: 50px;">
-            <div class="ps-3">
-              <h5 class="mb-1">Vrushali</h5>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-item bg-transparent border rounded p-4">
-          <i class="fa fa-quote-left fa-2x text-dark mb-3"></i>
-          <p>
-            Thank you so much. The pictures are beautiful. You're amazing and very talentd. Stay blessed.
-          </p>
-          <div class="d-flex align-items-center">
-            <img class="img-fluid flex-shrink-0 rounded-circle"
-              src="https://img.freepik.com/premium-vector/avatar-icon-circle-male-sign-vector-illustration_276184-170.jpg"
-              style="width: 50px; height: 50px;">
-            <div class="ps-3">
-              <h5 class="mb-1">Michelle</h5>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-item bg-transparent border rounded p-4">
-          <i class="fa fa-quote-left fa-2x text-dark mb-3"></i>
-          <p>
-            Thank you so much! The photos are honestly so beautiful. You're super talented and amazing. Wishing you all
-            the best always 💛 </p>
-          <div class="d-flex align-items-center">
-            <img class="img-fluid flex-shrink-0 rounded-circle"
-              src="https://thumbs.dreamstime.com/b/man-traveler-backpack-circle-avatar-bearded-male-tourist-hiker-beanie-head-portrait-happy-smiling-backpacker-nomad-user-363582206.jpg"
-              style="width: 50px; height: 50px;">
-            <div class="ps-3">
-              <h5 class="mb-1">Matt</h5>
-            </div>
-          </div>
-        </div>
+      <div class="col-lg-6">
+        <p class="fs-5 text-secondary fs-6">
+          I'm here to create space for real connection—to help you slow down, breathe each other in, and remember why this all started. Let's make photos that feel like a Sunday morning, a road trip playlist, an iced coffee, a warm hug. Something real. Something you'll love forever.
+        </p>
       </div>
     </div>
   </div>
-  <!-- Feedback End -->
-  <!--Footer-->
-  <footer class="site-footer" width="100%" style="margin-top: 2%;">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12" style="text-align: center;">
-          <h6>About</h6>
-          <p class="text-justify">I believe there is extraordinary beauty in the simplest of moments. And that beautiful
-            moments deserve awesome photographs. </p>
+</section>
+
+
+  <!-- Black & White Full Width -->
+  <section class="p-0">
+  <img src="/img/index/7b.webp" 
+       class="w-100 d-block" 
+       style="height: 700px; object-fit: cover;" 
+       alt="B&W Photo">
+</section>
+
+
+  <!-- Quote Section - Using Bootstrap -->
+  <!-- <section class="text-center text-white py-5" style="background: black;">
+    <div class="container py-5">
+      <blockquote class="blockquote mx-auto fs-4 fst-italic fw-light lh-lg" style="max-width: 900px;">
+        "Discovering a family, Nhi's picture-perfect. She's full of confidence, empathy and laughter. More than a snapshot."
+      </blockquote>
+    </div>
+  </section> -->
+
+  <!-- Info Text with Photo - Using Bootstrap -->
+  <!-- <section class="bg-white py-5">
+    <div class="container py-4">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7">
+          <p class="text-secondary lh-lg mb-3">Adrianne, Tayden, Theodore, Nora</p>
+          <p class="text-secondary lh-lg mb-3">Taylor a four daughter, beautifully wild definitely, Newberry's treasurer</p>
+          <p class="text-secondary lh-lg mb-3">New stuff of adventure next. It's maybe in an open ended at Loft which means it's probably in a daze from all of it. But in the space of it if it feels pretty & more than it comes with an undeniable amount of truth.</p>
         </div>
-        <hr>
+        <div class="col-lg-5">
+          <img src="/img/index/7.webp" 
+               class="img-fluid" 
+               style="height: 500px; width: 100%; object-fit: cover;" 
+               alt="Family Photo">
+        </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2023 by Vo Ngoc Khanh Nhi
-            </p>
-          </div>
+    </div>
+  </section> -->
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i
-                    class="fa fa-facebook"></i></a></li>
-              <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i
-                    class="fa fa-instagram"></i></a></li>
-              <li><a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i
-                    class="fa fa-flickr"></i></a></li>
-            </ul>
+  <!-- Photo Collage -->
+<section class="py-5">
+  <div class="container py-4">
+    <div class="row g-3">
+      <div class="col-6">
+        <a href="decadeoflove.html"><img src="img/decadeoflove/decadeoflove34.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="vrushali.html"><img src="img/vrushali/vrushali82.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="lily.html"><img src="img/profolio/porfolio2.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="lily.html"><img src="img/profolio/porfolio1.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="vongfamily2.html"><img src="img/index/Slider6.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="vongfamily.html"><img src="img/index/Slider1.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="tonyfall.html"><img src="img/tonyfall/tonyfall24.webp" width="100%"></a>
+      </div>
+      <div class="col-6">
+        <a href="lily.html"><img src="img/index/Slider7.webp" width="100%"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section - Using Bootstrap -->
+  <!-- <section class="bg-white py-5">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="display-4" style="color: #6B7F6E;">Services</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="text-center p-4 bg-light rounded" 
+               style="transition: all 0.3s ease;"
+               onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <i class="fa fa-users fa-3x mb-3" style="color: #B3CCBB;"></i>
+            <h4 class="fs-4 my-3" style="color: #6B7F6E;">Family Portraits</h4>
+            <p class="text-secondary lh-base">Capture the love and connection that makes your family unique with timeless portraits.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center p-4 bg-light rounded" 
+               style="transition: all 0.3s ease;"
+               onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <i class="fa fa-heart fa-3x mb-3" style="color: #B3CCBB;"></i>
+            <h4 class="fs-4 my-3" style="color: #6B7F6E;">Maternity</h4>
+            <p class="text-secondary lh-base">Celebrate the beauty of motherhood with elegant maternity photography.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center p-4 bg-light rounded" 
+               style="transition: all 0.3s ease;"
+               onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <i class="fa fa-graduation-cap fa-3x mb-3" style="color: #B3CCBB;"></i>
+            <h4 class="fs-4 my-3" style="color: #6B7F6E;">Graduation</h4>
+            <p class="text-secondary lh-base">Mark this milestone with professional graduation portraits you'll treasure forever.</p>
           </div>
         </div>
       </div>
-  </footer>
-  <script src="js/jquery-3.6.0.min.js"></script>
+    </div>
+  </section> -->
 
-  <script src="js/owlcarousel/owl.carousel.min.js"></script>
-  <script src="js/wow/wow.min.js"></script>
-  <script src="venobox/venobox.min.js"></script>
-  <script src="venobox/custom.js"></script>
+  <!-- Footer - Using Bootstrap -->
+  <footer class="text-white py-5 bg-black">
+  <div class="container py-4">
 
-  <script src="js/easing/easing.min.js"></script>
-  <script src="js/tempusdominus/js/moment.min.js"></script>
-  <script src="js/tempusdominus/js/moment-timezone.min.js"></script>
-  <script src="js/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-  <script src="js/site.js"></script>
+    <!-- About Section -->
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <p class="text-secondary lh-base">
+          I believe there is extraordinary beauty in the simplest of moments.<br>
+          And that beautiful moments deserve awesome photographs.
+        </p>
+      </div>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <hr class="border-secondary">
+
+    <!-- Copyright & Social Icons -->
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-12 col-md-8 mb-2 mb-md-0">
+        <p class="mb-0 text-secondary">Copyright © 2023 by Vo Ngoc Khanh Nhi</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <ul class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0">
+          <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i class="fa fa-flickr"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const track = document.getElementById("lcTrack");
+const prev = document.querySelector(".lc-btn.prev");
+const next = document.querySelector(".lc-btn.next");
+
+let originals = [...track.children];
+let slides = [];
+let index = 0;
+let visible = 3;
+let isAnimating = false;
+
+/* ===== INIT / REBUILD ===== */
+function setup(){
+  track.innerHTML = "";
+  visible = window.innerWidth <= 768 ? 1 : 3;
+
+  originals.forEach(s => track.appendChild(s.cloneNode(true)));
+
+  const items = [...track.children];
+  const head = items.slice(0, visible);
+  const tail = items.slice(-visible);
+
+  tail.forEach(el => track.insertBefore(el.cloneNode(true), track.firstChild));
+  head.forEach(el => track.appendChild(el.cloneNode(true)));
+
+  slides = [...track.children];
+  index = visible;
+  move(false);
+}
+
+/* ===== MOVE SLIDE ===== */
+function move(anim = true){
+  if(anim) isAnimating = true;
+
+  const w = slides[0].getBoundingClientRect().width;
+  track.style.transition = anim ? "transform .45s cubic-bezier(.4,0,.2,1)" : "none";
+  track.style.transform = `translateX(-${w * index}px)`;
+}
+
+/* ===== BUTTON HANDLERS ===== */
+next.onclick = ()=>{
+  if(isAnimating) return;
+  index++;
+  move();
+};
+
+prev.onclick = ()=>{
+  if(isAnimating) return;
+  index--;
+  move();
+};
+
+/* ===== LOOP FIX & UNLOCK ===== */
+track.addEventListener("transitionend", ()=>{
+  if(index >= slides.length - visible){
+    index = visible;
+    move(false);
+  }
+  if(index <= 0){
+    index = slides.length - visible*2;
+    move(false);
+  }
+  isAnimating = false;
+});
+
+/* ===== DEBOUNCE RESIZE ===== */
+let resizeTimer;
+window.addEventListener("resize", ()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(setup, 200);
+});
+
+setup();
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('mainNav');
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
-
-
 </html>
