@@ -12,7 +12,7 @@ body {
 }
 
 /* ============================================
-   NAVBAR STYLES - Version 1 & 2 + Mobile
+   NAVBAR STYLES - FIXED VERSION
    ============================================ */
 
 /* Base Navbar */
@@ -32,11 +32,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
 }
 
+/* Logo */
 .navbar-brand {
   flex: 0 0 auto;
   z-index: 1001;
+  position: relative;
 }
 
 .navbar-brand img {
@@ -44,7 +48,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Title ở giữa */
+/* Title ở giữa - Desktop */
 .navbar-title {
   position: absolute;
   left: 50%;
@@ -70,13 +74,15 @@ body {
 
 .navbar-nav {
   margin: 0 !important;
+  flex-direction: row;
 }
 
-/* Nav links - Version 1 */
+/* Nav links */
 .nav-link {
   color: white !important;
   font-size: 16px;
   margin: 0 15px;
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -88,7 +94,7 @@ body {
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -100,11 +106,12 @@ body {
   width: 100%;
 }
 
-/* Toggler button - Version 1 */
+/* Toggler button */
 .navbar-toggler {
-  border-color: white;
+  border: 1px solid white;
   padding: 5px 10px;
   z-index: 1001;
+  position: relative;
 }
 
 .navbar-toggler:focus {
@@ -117,7 +124,7 @@ body {
 }
 
 /* ============================================
-   VERSION 2 - White (Sau khi cuộn hoặc trang phụ)
+   SCROLLED / WHITE VERSION
    ============================================ */
 
 .navbar.scrolled,
@@ -127,26 +134,22 @@ body {
   padding: 10px 0;
 }
 
-/* Logo nhỏ lại */
 .navbar.scrolled .navbar-brand img,
 .navbar-white .navbar-brand img {
   height: 35px;
 }
 
-/* Title màu xanh */
 .navbar.scrolled .navbar-title h2,
 .navbar-white .navbar-title h2 {
   color: #6B7F6E;
   font-size: 1.3rem;
 }
 
-/* Links màu đen */
 .navbar.scrolled .nav-link,
 .navbar-white .nav-link {
   color: #333 !important;
 }
 
-/* Toggler màu đen */
 .navbar.scrolled .navbar-toggler,
 .navbar-white .navbar-toggler {
   border-color: #333;
@@ -158,88 +161,105 @@ body {
 }
 
 /* ============================================
-   MOBILE RESPONSIVE - FIXED VERSION
+   MOBILE RESPONSIVE - COMPLETELY FIXED
    ============================================ */
 
 @media (max-width: 991px) {
-  /* Container layout mobile */
-  .navbar .container-fluid {
-    flex-wrap: wrap;
-    position: relative;
+  /* Navbar padding */
+  .navbar {
+    padding: 15px 0;
   }
 
-  /* Logo - góc trái */
+  .navbar.scrolled,
+  .navbar-white {
+    padding: 10px 0;
+  }
+
+  /* Container - cho phép wrap */
+  .navbar .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  /* Logo - trái */
   .navbar-brand {
     order: 1;
-    flex: 0 0 auto;
+    margin-right: 10px;
   }
 
   .navbar-brand img {
-    height: 35px !important;
+    height: 32px !important;
   }
 
-  /* Title - ở giữa */
+  .navbar.scrolled .navbar-brand img,
+  .navbar-white .navbar-brand img {
+    height: 30px !important;
+  }
+
+  /* Toggler - phải */
+  .navbar-toggler {
+    order: 3;
+    margin-left: 10px;
+  }
+
+  /* Title - giữa, nhưng không absolute */
   .navbar-title {
     order: 2;
     position: static !important;
     transform: none !important;
-    flex: 1;
+    flex: 1 1 auto;
     text-align: center;
-    margin: 0 10px;
     pointer-events: auto;
+    min-width: 0;
   }
 
   .navbar-title h2 {
-    font-size: 1rem !important;
-    white-space: normal;
-    line-height: 1.2;
+    font-size: 0.95rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .navbar.scrolled .navbar-title h2,
   .navbar-white .navbar-title h2 {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
   }
 
-  /* Toggler - góc phải */
-  .navbar-toggler {
-    order: 3;
-    flex: 0 0 auto;
-  }
-
-  /* Menu collapse - full width ở dưới */
+  /* Menu collapse - full width row mới */
   .navbar-collapse {
     order: 4;
+    flex-basis: 100%;
     width: 100%;
     margin-top: 10px;
   }
 
-  /* Menu items */
+  /* Nav items vertical */
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Nav links */
   .nav-link {
     margin: 0 !important;
     padding: 12px 15px !important;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: block;
-  }
-
-  .navbar.scrolled .nav-link,
-  .navbar-white .nav-link {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    text-align: left;
   }
 
   .nav-link::after {
     display: none !important;
   }
 
-  /* Background cho menu mobile khi mở - Version 1 */
+  /* Menu background khi mở - transparent version */
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
     background-color: rgba(0, 0, 0, 0.95);
     padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    margin-top: 10px;
   }
 
-  /* Background cho menu mobile - Version 2 */
+  /* Menu background - white version */
   .navbar.scrolled .navbar-collapse.show,
   .navbar.scrolled .navbar-collapse.collapsing,
   .navbar-white .navbar-collapse.show,
@@ -248,17 +268,26 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
-  /* Links trong menu mobile */
-  .navbar-collapse.show .nav-link {
+  /* Link colors trong menu mở */
+  .navbar-collapse.show .nav-link,
+  .navbar-collapse.collapsing .nav-link {
     color: white !important;
   }
 
   .navbar.scrolled .navbar-collapse.show .nav-link,
-  .navbar-white .navbar-collapse.show .nav-link {
+  .navbar.scrolled .navbar-collapse.collapsing .nav-link,
+  .navbar-white .navbar-collapse.show .nav-link,
+  .navbar-white .navbar-collapse.collapsing .nav-link {
     color: #333 !important;
   }
 
-  /* Last item không có border */
+  /* Scrolled version borders */
+  .navbar.scrolled .nav-link,
+  .navbar-white .nav-link {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* Last item no border */
   .navbar-nav .nav-item:last-child .nav-link {
     border-bottom: none;
   }
@@ -267,7 +296,7 @@ body {
 /* Extra small devices */
 @media (max-width: 576px) {
   .navbar {
-    padding: 15px 0;
+    padding: 12px 0;
   }
 
   .navbar.scrolled,
@@ -276,12 +305,12 @@ body {
   }
 
   .navbar-brand img {
-    height: 30px !important;
+    height: 28px !important;
   }
 
   .navbar.scrolled .navbar-brand img,
   .navbar-white .navbar-brand img {
-    height: 28px !important;
+    height: 26px !important;
   }
 
   .navbar-title h2 {
@@ -298,6 +327,11 @@ body {
     padding-right: 15px !important;
   }
 }
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
 .hero {
   position: relative;
   width: 100%;
@@ -305,96 +339,81 @@ body {
 }
 
 .hero img.hero-img {
-  width: 100%;   /* full width */
-  height: auto;  /* tỉ lệ ảnh tự nhiên */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-  pointer-events: none; /* để không chắn click */
+  pointer-events: none;
 }
-
 
 /* ============================================
    HERO CAROUSEL
    ============================================ */
 
-.loop-carousel{
-  max-width:1600px;        /* tăng chiều ngang */
-  position:relative;
-  padding:0 12px;         /* sát viền hơn */
+.loop-carousel {
+  max-width: 1600px;
+  position: relative;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
-.lc-viewport{
-  overflow:hidden;
+.lc-viewport {
+  overflow: hidden;
 }
 
-.lc-track{
-  display:flex;
-  transition:transform .45s cubic-bezier(.4,0,.2,1);
+.lc-track {
+  display: flex;
+  transition: transform .45s cubic-bezier(.4,0,.2,1);
 }
 
-.lc-item{
-  flex:0 0 calc(100% / 3);
-  padding:0 4px;          /* giảm khoảng trống giữa ảnh */
-  height:620px;          /* TO hơn */
-  display:block;
+.lc-item {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 4px;
+  height: 620px;
+  display: block;
 }
 
-.lc-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.lc-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* buttons */
-.lc-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:none;
-  border:none;
-  font-size:64px;
-  color:black;
-  cursor:pointer;
+.lc-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 64px;
+  color: black;
+  cursor: pointer;
   z-index: 2;
 }
 
-.lc-btn.prev{ left:24px; }
-.lc-btn.next{ right:24px; }
+.lc-btn.prev {
+  left: 24px;
+}
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .lc-item{
-    flex:0 0 100%;
-    height:440px;       /* mobile cũng to hơn */
-    padding:0;
+.lc-btn.next {
+  right: 24px;
+}
+
+@media (max-width: 768px) {
+  .lc-item {
+    flex: 0 0 100%;
+    height: 440px;
+    padding: 0;
   }
 }
-
-
-/* Buttons */
-.bs-prev, .bs-next {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  font-size: 20px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 10;
-}
-
-.bs-prev { left: -20px; }
-.bs-next { right: -20px; }
-
 
 /* ============================================
    FOOTER
@@ -496,12 +515,12 @@ body {
 .social-icons {
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none
+  list-style: none;
 }
 
 .social-icons li {
   display: inline-block;
-  margin-bottom: 4px
+  margin-bottom: 4px;
 }
 
 .social-icons li.title {
@@ -509,7 +528,7 @@ body {
   text-transform: uppercase;
   color: #96a2b2;
   font-weight: 700;
-  font-size: 13px
+  font-size: 13px;
 }
 
 .social-icons a {
@@ -523,42 +542,38 @@ body {
   text-align: center;
   margin-right: 8px;
   border-radius: 100%;
-  -webkit-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear
+  transition: all .2s linear;
 }
 
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
-  background-color: #29aafe
+  background-color: #29aafe;
 }
 
 .social-icons.size-sm a {
   line-height: 34px;
   height: 34px;
   width: 34px;
-  font-size: 14px
+  font-size: 14px;
 }
 
 .social-icons a.facebook:hover {
-  background-color: #3b5998
+  background-color: #3b5998;
 }
 
 .social-icons a.instagram:hover {
-  background-color: #d6249f;
-  background-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .social-icons li.title {
     display: block;
     margin-right: 0;
     font-weight: 600;
   }
 }
-
 
 /* ============================================
    OTHER STYLES
