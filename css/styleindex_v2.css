@@ -12,7 +12,7 @@ body {
 }
 
 /* ============================================
-   NAVBAR STYLES - FIXED VERSION
+   NAVBAR STYLES - COMPLETELY FIXED
    ============================================ */
 
 /* Base Navbar */
@@ -28,6 +28,7 @@ body {
   background-color: transparent !important;
 }
 
+/* Container - DESKTOP */
 .navbar .container-fluid {
   display: flex;
   align-items: center;
@@ -46,9 +47,10 @@ body {
 .navbar-brand img {
   height: 40px;
   transition: all 0.3s ease;
+  display: block;
 }
 
-/* Title ở giữa - Desktop */
+/* Title - DESKTOP (absolute center) */
 .navbar-title {
   position: absolute;
   left: 50%;
@@ -56,6 +58,7 @@ body {
   text-align: center;
   pointer-events: none;
   z-index: 999;
+  max-width: 50%;
 }
 
 .navbar-title h2 {
@@ -67,7 +70,7 @@ body {
   white-space: nowrap;
 }
 
-/* Navbar collapse */
+/* Navbar collapse - DESKTOP */
 .navbar-collapse {
   flex: 0 0 auto;
 }
@@ -77,7 +80,7 @@ body {
   flex-direction: row;
 }
 
-/* Nav links */
+/* Nav links - DESKTOP */
 .nav-link {
   color: white !important;
   font-size: 16px;
@@ -121,6 +124,8 @@ body {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 24px;
+  height: 24px;
 }
 
 /* ============================================
@@ -161,102 +166,91 @@ body {
 }
 
 /* ============================================
-   MOBILE RESPONSIVE - COMPLETELY FIXED
+   MOBILE RESPONSIVE - ULTIMATE FIX
    ============================================ */
 
 @media (max-width: 991px) {
-  /* Navbar padding */
-  .navbar {
-    padding: 15px 0;
+  
+  /* CRITICAL: Override Bootstrap defaults */
+  .navbar > .container-fluid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    position: relative !important;
   }
 
-  .navbar.scrolled,
-  .navbar-white {
-    padding: 10px 0;
-  }
-
-  /* Container - cho phép wrap */
-  .navbar .container-fluid {
-    flex-wrap: wrap;
-  }
-
-  /* Logo - trái */
+  /* ROW 1: Logo - Title - Toggler */
   .navbar-brand {
-    order: 1;
-    margin-right: 10px;
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    margin-right: 8px !important;
   }
 
   .navbar-brand img {
     height: 32px !important;
   }
 
-  .navbar.scrolled .navbar-brand img,
-  .navbar-white .navbar-brand img {
-    height: 30px !important;
-  }
-
-  /* Toggler - phải */
-  .navbar-toggler {
-    order: 3;
-    margin-left: 10px;
-  }
-
-  /* Title - giữa, nhưng không absolute */
+  /* Title ở giữa - MOBILE (không dùng absolute) */
   .navbar-title {
-    order: 2;
-    position: static !important;
+    order: 2 !important;
+    position: relative !important;
+    left: auto !important;
     transform: none !important;
-    flex: 1 1 auto;
-    text-align: center;
-    pointer-events: auto;
-    min-width: 0;
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    pointer-events: auto !important;
+    max-width: calc(100% - 120px) !important;
+    margin: 0 8px !important;
   }
 
   .navbar-title h2 {
     font-size: 0.95rem !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
-  .navbar.scrolled .navbar-title h2,
-  .navbar-white .navbar-title h2 {
-    font-size: 0.9rem !important;
+  /* Toggler bên phải */
+  .navbar-toggler {
+    order: 3 !important;
+    flex: 0 0 auto !important;
+    margin-left: 8px !important;
   }
 
-  /* Menu collapse - full width row mới */
+  /* ROW 2: Menu collapse full width */
   .navbar-collapse {
-    order: 4;
-    flex-basis: 100%;
-    width: 100%;
-    margin-top: 10px;
+    order: 4 !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+    margin-top: 10px !important;
   }
 
-  /* Nav items vertical */
+  /* Nav items stack vertically */
   .navbar-nav {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
   }
 
-  /* Nav links */
+  /* Nav link styling */
   .nav-link {
     margin: 0 !important;
     padding: 12px 15px !important;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: block;
-    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    display: block !important;
+    text-align: left !important;
   }
 
   .nav-link::after {
     display: none !important;
   }
 
-  /* Menu background khi mở - transparent version */
+  /* Menu background - transparent version */
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 10px 0;
-    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    padding: 10px 0 !important;
+    border-radius: 0 0 10px 10px !important;
   }
 
   /* Menu background - white version */
@@ -264,11 +258,11 @@ body {
   .navbar.scrolled .navbar-collapse.collapsing,
   .navbar-white .navbar-collapse.show,
   .navbar-white .navbar-collapse.collapsing {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
   }
 
-  /* Link colors trong menu mở */
+  /* Link colors */
   .navbar-collapse.show .nav-link,
   .navbar-collapse.collapsing .nav-link {
     color: white !important;
@@ -281,27 +275,51 @@ body {
     color: #333 !important;
   }
 
-  /* Scrolled version borders */
+  /* Borders cho white version */
   .navbar.scrolled .nav-link,
   .navbar-white .nav-link {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
   }
 
   /* Last item no border */
   .navbar-nav .nav-item:last-child .nav-link {
-    border-bottom: none;
+    border-bottom: none !important;
   }
-}
 
-/* Extra small devices */
-@media (max-width: 576px) {
+  /* Scrolled title color */
+  .navbar.scrolled .navbar-title h2,
+  .navbar-white .navbar-title h2 {
+    font-size: 0.9rem !important;
+    color: #6B7F6E !important;
+  }
+
+  /* Scrolled logo size */
+  .navbar.scrolled .navbar-brand img,
+  .navbar-white .navbar-brand img {
+    height: 30px !important;
+  }
+
+  /* Navbar padding */
   .navbar {
-    padding: 12px 0;
+    padding: 15px 0 !important;
   }
 
   .navbar.scrolled,
   .navbar-white {
-    padding: 8px 0;
+    padding: 10px 0 !important;
+  }
+}
+
+/* Extra small devices - thêm responsive cho màn hình rất nhỏ */
+@media (max-width: 576px) {
+  
+  .navbar {
+    padding: 12px 0 !important;
+  }
+
+  .navbar.scrolled,
+  .navbar-white {
+    padding: 8px 0 !important;
   }
 
   .navbar-brand img {
@@ -313,18 +331,34 @@ body {
     height: 26px !important;
   }
 
+  .navbar-title {
+    max-width: calc(100% - 100px) !important;
+  }
+
   .navbar-title h2 {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
   }
 
   .navbar.scrolled .navbar-title h2,
   .navbar-white .navbar-title h2 {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
 
   .navbar .container-fluid {
     padding-left: 15px !important;
     padding-right: 15px !important;
+  }
+}
+
+/* Extra extra small - cho iPhone SE và tương tự */
+@media (max-width: 375px) {
+  .navbar-title h2 {
+    font-size: 0.7rem !important;
+  }
+
+  .navbar.scrolled .navbar-title h2,
+  .navbar-white .navbar-title h2 {
+    font-size: 0.65rem !important;
   }
 }
 
