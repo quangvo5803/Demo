@@ -712,3 +712,10 @@ html {
   right: -110px;
   background: #B3CCBB;
 }
+        /* Mobile: ẩn lines trên màn hình nhỏ */
+        @media (max-width: 576px) {
+            .heading-with-lines::before,
+            .heading-with-lines::after {
+                display: none;
+            }
+        }

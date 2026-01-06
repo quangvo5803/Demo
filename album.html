@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album - Awesome Dreamer Photography</title>
     <link rel="icon" href="/img/index/tablogo.webp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,381 +17,286 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styleindex_v2.css">
     <link rel="stylesheet" href="venobox/venobox.min.css">
+    <style>
+        body {
+            padding-top: 64px;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-text {
+            flex-grow: 1;
+        }
+    </style>
 </head>
-<style>
-  body {
-    padding-top: 64px;
-  }
-</style>
+
 <body>
     <!--NAV MENU-->
     <nav class="navbar navbar-expand-lg navbar-white" id="mainNav">
         <div class="container-fluid px-5">
-        <a class="navbar-brand" href="index.html">
-            <img src="img/index/logo.webp" alt="Logo">
-        </a>
-        
-        <div class="navbar-title">
-            <h2>Awesome Dreamer Photography</h2>
-        </div>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
+            <a class="navbar-brand" href="index.html">
+                <img src="img/index/logo.webp" alt="Logo">
+            </a>
 
-            <li class="nav-item">
-                <a class="nav-link" href="album.html">Album</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            </ul>
-        </div>
+            <div class="navbar-title">
+                <h2>Awesome Dreamer Photography</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">Album</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!--END NAV MENU-->
 
-    <div class="container mt-5 mb-5" style="max-width: 1500px;">
-        <!--Section: Content-->
-        <section class="text-center">
-            <h4 class="heading-with-lines mb-5"><strong id="main-heading" style="font-size: 48px; font-family: cursive; color: 
-            #B3CCBB;">Nhi's Album</strong></h4>
+    <div class="container my-5" style="max-width: 1400px;">
+        <section>
+            <div class="text-center">
+                <h4 class="heading-with-lines mb-5"><strong id="main-heading" style="font-size: 48px; font-family: cursive; color: #B3CCBB;">Nhi's Album</strong></h4>
+            </div>
 
-            <!-- First Row -->
-             
-            <div class="row d-flex align-items-stretch">
-                <div class="album col-lg-4 col-md-6" data-tags="Brothers,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/tonynancy/tonynancy1.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Tony and Nancy - Fall 2025.</h5>
-                            <p class="card-text flex-grow-1">
-                                This photoshoot was quickly taken only 30 minutes before
-                                sunset on an autumn afternoon in 2025. So far it is still one of my favorites albums
-                                I've taken for my cousins.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="tonynancy.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+            <div class="row g-4">
+                <!-- Tony and Nancy - Nov 29, 2025 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/tonynancy/tonynancy1.webp" class="card-img-top" alt="Tony and Nancy" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Tony and Nancy - Fall 2025</h5>
+                            <p class="text-muted small mb-3">Nov 29, 2025 · <span class="album-view" data-id="tonynancy">-- views</span></p>
+                            <p class="card-text mb-3">This photoshoot was quickly taken only 30 minutes before sunset on an autumn afternoon in 2025.</p>
+                            <a href="tonynancy.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/jayla2/jayla5.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Two Cute to Handle: Jayla's Birthday Bash</h5>
-                            <p class="card-text flex-grow-1">
-                               Each laugh, twirl, and sparkle in Jayla’s eyes tells a heartfelt story of her second birthday. Witnessing her joy as she explores the vibrant park and plays with her family fills my heart with warmth.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="jayla2.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,Anniversary,HanaumaBay,Honolulu,Hawaii">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/decadeoflove/decadeoflove62.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Decade of love: Our Journey Together</h5>
-                            <p class="card-text flex-grow-1">
-                                Celebrating a decade of love, laughter, and unforgettable moments
-                                together. Here's to many more adventures! 💖
-                            </p>
-                            <div class="mt-auto">
-                                <a href="decadeoflove.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="School,Graduation,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/seniorgrad/seniorgrad1.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
+
+                <!-- Senior Grad - May 28, 2025 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/seniorgrad/seniorgrad1.webp" class="card-img-top" alt="Senior Grad" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
                             <h5 class="card-title">Senior Grad</h5>
-                            <p class="card-text flex-grow-1">
-                                Diploma in hand, the world awaits.
-                                Congrats to the class of 2025!! ❤
-                            </p>
-                            <div class="mt-auto">
-                                <a href="seniorgrad.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+                            <p class="text-muted small mb-3">May 28, 2025 · <span class="album-view" data-id="seniorgrad">-- views</span></p>
+                            <p class="card-text mb-3">Diploma in hand, the world awaits. Congrats to the class of 2025!! ❤</p>
+                            <a href="seniorgrad.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6"
-                    data-tags="Love,Family,MaternityJourney,Filoli,Garden,HistoricHouse,Woodside,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/vrushali/vrushali39.webp" class="img-fluid" style=" width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Vrushali's maternity</h5>
-                            <p class="card-text flex-grow-1">
-                                This album captures the quiet strength, gentle beauty, and heartfelt joy of
-                                motherhood
-                                in bloom.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="vrushali.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+
+                <!-- Decade of Love - Aug 20, 2023 (updated to 2025) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/decadeoflove/decadeoflove62.webp" class="card-img-top" alt="Decade of Love" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Decade of Love: Our Journey Together</h5>
+                            <p class="text-muted small mb-3">Aug 20, 2023 · <span class="album-view" data-id="decadeoflove">-- views</span></p>
+                            <p class="card-text mb-3">Celebrating a decade of love, laughter, and unforgettable moments together. 💖</p>
+                            <a href="decadeoflove.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Garden,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider7.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
+
+                <!-- Ha Graduation - Jun 12, 2024 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/hagrade/hagrade20.webp" class="card-img-top" alt="Ha Graduation" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Tassel Turned, New Adventures Begin</h5>
+                            <p class="text-muted small mb-3">Jun 12, 2024 · <span class="album-view" data-id="hagrad">-- views</span></p>
+                            <p class="card-text mb-3">Diploma in hand, the world awaits. Congrats to the class of 2024!! ❤</p>
+                            <a href="hagrad.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
-                        <div class="card-body d-flex flex-column">
+                    </div>
+                </div>
+
+                <!-- Jayla's Birthday - Jun 15, 2024 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/jayla2/jayla5.webp" class="card-img-top" alt="Jayla's Birthday" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Two Cute to Handle: Jayla's Birthday Bash</h5>
+                            <p class="text-muted small mb-3">Jun 15, 2024 · <span class="album-view" data-id="jayla2">-- views</span></p>
+                            <p class="card-text mb-3">Each laugh, twirl, and sparkle in Jayla's eyes tells a heartfelt story of her second birthday.</p>
+                            <a href="jayla2.html" class="btn btn-dark btn-sm mt-auto">See more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vrushali's Maternity - Apr 10, 2024 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/vrushali/vrushali39.webp" class="card-img-top" alt="Vrushali's Maternity" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Vrushali's Maternity</h5>
+                            <p class="text-muted small mb-3">Apr 10, 2024 · <span class="album-view" data-id="vrushali">-- views</span></p>
+                            <p class="card-text mb-3">This album captures the quiet strength, gentle beauty, and heartfelt joy of motherhood in bloom.</p>
+                            <a href="vrushali.html" class="btn btn-dark btn-sm mt-auto">See more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lily - Mar 22, 2024 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider7.webp" class="card-img-top" alt="Lily" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
                             <h5 class="card-title">Lily</h5>
-                            <p class="card-text flex-grow-1">
-                                Here's to two years of cherished memories and a love that knows no bounds.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="lily.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+                            <p class="text-muted small mb-3">Mar 22, 2024 · <span class="album-view" data-id="lily">-- views</span></p>
+                            <p class="card-text mb-3">Here's to two years of cherished memories and a love that knows no bounds.</p>
+                            <a href="lily.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Brothers,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/tonyfall/tonyfall1.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Our neighbor area in San Jose.</h5>
-                            <p class="card-text flex-grow-1">
-                                This photoshoot was quickly taken only 30 minutes before
-                                sunset on an autumn afternoon in 2019. So far it is still one of my favorites albums
-                                I've taken for my cousins.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="tonyfall.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/adrianafam/adriana26.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
+
+                <!-- Adriana Family - Sep 08, 2023 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/adrianafam/adriana26.webp" class="card-img-top" alt="Adriana Family" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
                             <h5 class="card-title">Adriana Family</h5>
-                            <p class="card-text flex-grow-1">
-                                A Decade of Laughter, Love, and Milestones - Our Cherished Family
-                                Journey
-                            </p>
-                            <div class="mt-auto">
-                                <a href="adrianafam.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+                            <p class="text-muted small mb-3">Sep 08, 2023 · <span class="album-view" data-id="adrianafam">-- views</span></p>
+                            <p class="card-text mb-3">A Decade of Laughter, Love, and Milestones - Our Cherished Family Journey</p>
+                            <a href="adrianafam.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="School,Graduation,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/hagrade/hagrade20.webp" class="img-fluid" style="width: 100%;"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Tassel turned, and new adventures begin.</h5>
-                            <p class="card-text flex-grow-1">
-                                Diploma in hand, the world awaits.
-                                Congrats to the class of 2024!! ❤
-                            </p>
-                            <div class="mt-auto">
-                                <a href="hagrad.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+
+                <!-- 10 Year Anniversary - Jul 30, 2023 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider3.webp" class="card-img-top" alt="10 Year Anniversary" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">10 Year Anniversary</h5>
+                            <p class="text-muted small mb-3">Jul 30, 2023 · <span class="album-view" data-id="tenyear">-- views</span></p>
+                            <p class="card-text mb-3">It was a pleasure to be their memories keeper. Thank you for trusting me and being my valued client.</p>
+                            <a href="tenyear.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,Anniversary,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider3.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">10 Year Anniversary.</h5>
-                            <p class="card-text flex-grow-1">
-                                It was a pleasure to be their memories keeper last week.
-                                Thank you for trusting me
-                                and being my valued client. Can't wait to witness their love for the next decades!
-                            </p>
-                            <div class="mt-auto">
-                                <a href="tenyear.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+
+                <!-- Vong Family 2 - May 18, 2023 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider6.webp" class="card-img-top" alt="Vong Family" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Municipal Rose Garden, San Jose</h5>
+                            <p class="text-muted small mb-3">May 18, 2023 · <span class="album-view" data-id="vongfamily2">-- views</span></p>
+                            <p class="card-text mb-3">The Vong family made my photoshoot comfortable and relaxing. I was able to capture beautiful smiles.</p>
+                            <a href="vongfamily2.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
                 </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,Rose,Garden,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider6.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Municipal Rose Garden, San Jose.</h5>
-                            <p class="card-text flex-grow-1">
-                                The Vong family made my photoshoot comfortable and relaxing. I was able to
-                                capture one of the most beautiful smiles of these cute family members.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="vongfamily2.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Birthday,Flower,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider2.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Annie</h5>
-                            <p class="card-text flex-grow-1">
-                                Well, look who just turned 17!! I was so glad to capture these pictures for my
-                                beautiful friend, Annie. Happy 17th birthday! Growing and glowing!
-                            </p>
-                            <div class="mt-auto">
-                                <a href="annie.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,LavenderFarm,Flower,Abiquiu,NewMexico">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider5.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Purple Adobe Lavender Farm, Abiquiu, New Mexico.</h5>
-                            <p class="card-text flex-grow-1">
-                                Back to summer 2016 when I first met Chi in Canyon, we had a photoshoot for her
-                                graduation. I have always
-                                been so grateful for this friendship. We always had our ways to support each other.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="mattbrown.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="album col-lg-4 col-md-6" data-tags="Love,Family,SanJose,California">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/index/Slider1.webp" class="img-fluid" style="width: 100%;" loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
+
+                <!-- Vong Family 1 - Feb 14, 2022 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider1.webp" class="card-img-top" alt="Vong Family" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
                             <h5 class="card-title">Vong Family</h5>
-                            <p class="card-text flex-grow-1">
-                                A good marriage isn't something you find. It's something you make, and you have
-                                to keep on making it.
-                            </p>
-                            <div class="mt-auto">
-                                <a href="vongfamily.html" class="btn btn-dark" data-mdb-ripple-init>See more</a>
-                            </div>
+                            <p class="text-muted small mb-3">Feb 14, 2022 · <span class="album-view" data-id="vongfamily">-- views</span></p>
+                            <p class="card-text mb-3">A good marriage isn't something you find. It's something you make, and you have to keep on making it.</p>
+                            <a href="vongfamily.html" class="btn btn-dark btn-sm mt-auto">See more</a>
                         </div>
                     </div>
-                </div>              
+                </div>
+
+                <!-- Annie - Apr 05, 2022 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider2.webp" class="card-img-top" alt="Annie" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Annie</h5>
+                            <p class="text-muted small mb-3">Apr 05, 2022 · <span class="album-view" data-id="annie">-- views</span></p>
+                            <p class="card-text mb-3">Well, look who just turned 17!! Happy 17th birthday! Growing and glowing!</p>
+                            <a href="annie.html" class="btn btn-dark btn-sm mt-auto">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tony Fall - Oct 15, 2019 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/tonyfall/tonyfall1.webp" class="card-img-top" alt="Tony Fall" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Neighbor Area in San Jose</h5>
+                            <p class="text-muted small mb-3">Oct 15, 2019 · <span class="album-view" data-id="tonyfall">-- views</span></p>
+                            <p class="card-text mb-3">This photoshoot was quickly taken only 30 minutes before sunset on an autumn afternoon in 2019.</p>
+                            <a href="tonyfall.html" class="btn btn-dark btn-sm mt-auto">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Matt Brown - Jul 20, 2016 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-1 shadow-sm h-100">
+                        <img src="img/index/Slider5.webp" class="card-img-top" alt="Purple Adobe Lavender Farm" loading="lazy" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Purple Adobe Lavender Farm, Abiquiu</h5>
+                            <p class="text-muted small mb-3">Jul 20, 2016 · <span class="album-view" data-id="mattbrown">-- views</span></p>
+                            <p class="card-text mb-3">Back to summer 2016 when I first met Chi in Canyon. I have always been so grateful for this friendship.</p>
+                            <a href="mattbrown.html" class="btn btn-dark btn-sm mt-auto">See more</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+
             </div>
         </section>
     </div>
+
     <!--Footer-->
     <footer class="text-white py-5 bg-black">
         <div class="container py-4">
-
             <!-- About Section -->
             <div class="row">
-            <div class="col-12 text-center mb-4">
-                <p class="text-secondary lh-base">
-                I believe there is extraordinary beauty in the simplest of moments.<br>
-                And that beautiful moments deserve awesome photographs.
-                </p>
-            </div>
+                <div class="col-12 text-center mb-4">
+                    <p class="text-secondary lh-base">
+                        I believe there is extraordinary beauty in the simplest of moments.<br>
+                        And that beautiful moments deserve awesome photographs.
+                    </p>
+                </div>
             </div>
 
             <hr class="border-secondary">
 
             <!-- Copyright & Social Icons -->
             <div class="row align-items-center text-center text-md-start">
-            <div class="col-12 col-md-8 mb-2 mb-md-0">
-                <p class="mb-0 text-secondary">Copyright © 2023 by Vo Ngoc Khanh Nhi</p>
-            </div>
+                <div class="col-12 col-md-8 mb-2 mb-md-0">
+                    <p class="mb-0 text-secondary">Copyright © 2023 by Vo Ngoc Khanh Nhi</p>
+                </div>
 
-            <div class="col-12 col-md-4">
-                <ul class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0">
-                <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i class="fa fa-flickr"></i></a></li>
-                </ul>
+                <div class="col-12 col-md-4">
+                    <ul class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0">
+                        <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-
         </div>
-        </footer>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="js/site.js"></script>
 </body>
+
+</html>

@@ -62,10 +62,18 @@
     <div class="text-center">
       <h4 class=" heading-with-lines mb-3 mt-5"><strong style="font-size: 48px; font-family: cursive; color: 
       #B3CCBB;">Annie</strong></h4>
+      
+      <!-- DATE + VIEW -->
+      <div class="text-white mb-3" style="font-size:14px;">
+        <i class="fa fa-calendar"></i> <span id="album-date">Apr 05, 2022</span>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="fa fa-eye"></i> <span id="view-count">0 views</span>
+      </div>
       <div class="row mb-1">
         <p class="text-white">Well, look who just turned 17!! I was so glad to capture these pictures for my
           beautiful friend, Annie. Happy 17th birthday! Growing and glowing!</p>
       </div>
+
       <div>
         <a class="text-decoration-none" href="album.html?tag=Birthday">
           <span class="badge rounded-pill mb-3"
@@ -263,6 +271,9 @@
 
     </div>
   </footer>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="js/site.js"></script>
   <script src="venobox/venobox.min.js"></script>
   <script src="venobox/custom.js"></script>
 </body>
