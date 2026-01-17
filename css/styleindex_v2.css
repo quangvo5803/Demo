@@ -169,7 +169,7 @@ body {
    MOBILE RESPONSIVE - ULTIMATE FIX
    ============================================ */
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   
   /* CRITICAL: Override Bootstrap defaults */
   .navbar > .container-fluid {
