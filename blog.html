@@ -1,204 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Awesome Dreamer Photography</title>
-    <link rel="icon" href="/img/index/tablogo.webp">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styleindex_v2.css">
-</head>
-<style>
-  body {
-    padding-top: 64px;
-  }
-</style>
-<body>
+    <link rel="icon" href="/img/index/tablogo.webp" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/styleindex_v2.css" />
+  </head>
+  <style>
+    body {
+      padding-top: 64px;
+    }
+
+    /* Đồng bộ chiều cao và tỷ lệ ảnh cho các card */
+    .card {
+      height: 100%;
+    }
+
+    .bg-image {
+      position: relative;
+      width: 100%;
+      padding-top: 66.67%; /* Tỷ lệ 3:2 (chiều cao = 2/3 chiều rộng) */
+      overflow: hidden;
+    }
+
+    .bg-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo ảnh fill đầy khung mà không bị méo */
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-text {
+      flex-grow: 1;
+    }
+  </style>
+  <body>
     <!--NAV MENU-->
     <nav class="navbar navbar-expand-xl navbar-white" id="mainNav">
-        <div class="container-fluid px-5">
+      <div class="container-fluid px-5">
         <a class="navbar-brand" href="index.html">
-            <img src="img/index/logo.webp" alt="Logo">
+          <img src="img/index/logo.webp" alt="Logo" />
         </a>
-        
-        <div class="navbar-title">
-            <h2>Awesome Dreamer Photography</h2>
-        </div>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="album.html">Album</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="travel.html">Travel Journal</a>
-                </li>
-            </ul>
+        <div class="navbar-title">
+          <h2>Awesome Dreamer Photography</h2>
         </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="album.html">Album</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="travel.html">Travel Journal</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!--END NAV MENU-->
     <!--Blog-->
-    <div class="container mt-5 mb-5" style="max-width: 1500px;">
-        <!--Section: Content-->
-        <section class="text-center">
-            <h4 class="heading-with-lines mb-5"><strong style="font-size: 48px; font-family: cursive; color: 
-                #B3CCBB;">Nhi's Blog</strong></h4>
+    <div class="container mt-5 mb-5" style="max-width: 1500px">
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="heading-with-lines mb-5">
+          <strong style="font-size: 48px; font-family: cursive; color: #b3ccbb">
+            Nhi's Blog
+          </strong>
+          <p
+            class="mt-1"
+            style="
+              font-size: 18px;
+              font-family: 'Arial', sans-serif;
+              color: #888;
+            "
+          >
+            We write to taste life twice
+          </p>
+        </h4>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay mt-1" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/blog/maythegreen/maythegreencover.webp" class="img-fluid w-100"
-                                loading="lazy" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">May the green never stray.</h5>
-                            <p class="card-text flex-grow-1">
-                                May, more than any other month of the year, wants us to feel most alive.
-                            </p>
-                            <a href="maythegreen.html" class="btn btn-dark mt-auto" data-mdb-ripple-init>Read</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/blog/pacific/0ab772_9c128bb81d614c0fbe0dc34b471d32f8~mv2.webp"
-                                class="img-fluid w-100" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Pacific Northwest Wanderlust</h5>
-                            <p class="card-text flex-grow-1">
-                                "Life is not measured by the number of breaths we take but by the places and moments
-                                that take our breath away."
-                            </p>
-                            <a href="pracificblog.html" class="btn btn-dark mt-auto" data-mdb-ripple-init>Read</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/blog/sweetcorner/sweetconnercover.webp" class="img-fluid w-100" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">The Sweet Corner - The sweet memory.</h5>
-                            <p class="card-text flex-grow-1">
-                                Với mình, TSC là nơi lưu giữ rất nhiều kỉ niệm
-                                mà mình sẽ luôn biết ơn vì được là một phần của những kỉ niệm đó.
-                            </p>
-                            <a href="sweetcorner.html" class="btn btn-dark mt-auto" data-mdb-ripple-init>Read</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/blog/fiveyear/fiveyearcover.webp" class="img-fluid w-100" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Five years. One note. A thousand thoughts.</h5>
-                            <p class="card-text flex-grow-1">
-                                Ngày này 5 năm trước, mệt nhoài sau chuyến bay dài lê thê chục tiếng để đến một đất nước
-                                xa lạ.
-                            </p>
-                            <a href="fiveyear.html" class="btn btn-dark mt-auto" data-mdb-ripple-init>Read</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="img/blog/twenty/twentycover.webp" class="img-fluid w-100" />
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Let it be me!</h5>
-                            <p class="card-text flex-grow-1">
-                                Rose is red. Violet is blue.<br>
-                                Ready or not. Today I'm 22!
-                            </p>
-                            <a href="twenty.html" class="btn btn-dark mt-auto" data-mdb-ripple-init>Read</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay mt-1"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/nationalpark/nationpark50.webp"
+                  class="img-fluid w-100"
+                  loading="lazy"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Nation Parks</h5>
+                <p class="card-text flex-grow-1">
+                  Thì đời là một chuyến đi mà. live when you can :) ——> this is
+                  me rewinding my journey of visiting all 9 national parks of
+                  California…I'm so freaking grateful…
+                </p>
+                <a
+                  href="nationpark.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay mt-1"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/maythegreen/maythegreencover.webp"
+                  class="img-fluid w-100"
+                  loading="lazy"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">May the green never stray.</h5>
+                <p class="card-text flex-grow-1">
+                  May, more than any other month of the year, wants us to feel
+                  most alive.
+                </p>
+                <a
+                  href="maythegreen.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/pacific/0ab772_9c128bb81d614c0fbe0dc34b471d32f8~mv2.webp"
+                  class="img-fluid w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Pacific Northwest Wanderlust</h5>
+                <p class="card-text flex-grow-1">
+                  "Life is not measured by the number of breaths we take but by
+                  the places and moments that take our breath away."
+                </p>
+                <a
+                  href="pracificblog.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/sweetcorner/sweetconnercover.webp"
+                  class="img-fluid w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">The Sweet Corner - The sweet memory.</h5>
+                <p class="card-text flex-grow-1">
+                  Với mình, TSC là nơi lưu giữ rất nhiều kỉ niệm mà mình sẽ luôn
+                  biết ơn vì được là một phần của những kỉ niệm đó.
+                </p>
+                <a
+                  href="sweetcorner.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/fiveyear/fiveyearcover.webp"
+                  class="img-fluid w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Five years. One note. A thousand thoughts.
+                </h5>
+                <p class="card-text flex-grow-1">
+                  Ngày này 5 năm trước, mệt nhoài sau chuyến bay dài lê thê chục
+                  tiếng để đến một đất nước xa lạ.
+                </p>
+                <a
+                  href="fiveyear.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 d-flex flex-column">
+              <div
+                class="bg-image hover-overlay"
+                data-mdb-ripple-init
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src="img/blog/twenty/twentycover.webp"
+                  class="img-fluid w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15)"
+                  ></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Let it be me!</h5>
+                <p class="card-text flex-grow-1">
+                  Rose is red. Violet is blue.<br />
+                  Ready or not. Today I'm 22!
+                </p>
+                <a
+                  href="twenty.html"
+                  class="btn btn-dark mt-auto"
+                  data-mdb-ripple-init
+                  >Read</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!--End Blog-->
 
     <!--Footer-->
     <footer class="text-white py-5 bg-black">
-  <div class="container py-4">
+      <div class="container py-4">
+        <!-- About Section -->
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <p class="text-secondary lh-base">
+              I believe there is extraordinary beauty in the simplest of
+              moments.<br />
+              And that beautiful moments deserve awesome photographs.
+            </p>
+          </div>
+        </div>
 
-    <!-- About Section -->
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <p class="text-secondary lh-base">
-          I believe there is extraordinary beauty in the simplest of moments.<br>
-          And that beautiful moments deserve awesome photographs.
-        </p>
+        <hr class="border-secondary" />
+
+        <!-- Copyright & Social Icons -->
+        <div class="row align-items-center text-center text-md-start">
+          <div class="col-12 col-md-8 mb-2 mb-md-0">
+            <p class="mb-0 text-secondary">
+              Copyright © 2023 by Vo Ngoc Khanh Nhi
+            </p>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <ul
+              class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0"
+            >
+              <li>
+                <a
+                  class="facebook"
+                  href="https://www.facebook.com/awesomedreamerphotography"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="instagram"
+                  href="https://www.instagram.com/anawesomeworld_vnkn/"
+                  target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="flickr"
+                  href="https://www.flickr.com/photos/153690456@N03/albums/"
+                  target="_blank"
+                  ><i class="fa fa-flickr"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <hr class="border-secondary">
-
-    <!-- Copyright & Social Icons -->
-    <div class="row align-items-center text-center text-md-start">
-      <div class="col-12 col-md-8 mb-2 mb-md-0">
-        <p class="mb-0 text-secondary">Copyright © 2023 by Vo Ngoc Khanh Nhi</p>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <ul class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0">
-          <li><a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i class="fa fa-flickr"></i></a></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</footer>
-</body>
-
+    </footer>
+  </body>
 </html>
